@@ -49,13 +49,13 @@ body {
 /* --- MENÚ LATERAL --- */
 .menu-lateral {
     position: fixed;
-    top: 65px; /* Empieza justo debajo de la barra superior */
-    left: -250px; /* Oculto hacia la izquierda */
+    top: 65px; 
+    left: -250px; 
     width: 250px;
     height: calc(100vh - 65px);
     background-color: #f4f4f4;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    transition: left 0.3s ease; /* Animación suave al abrir/cerrar */
+    transition: left 0.3s ease; 
     z-index: 999;
 }
 
@@ -82,7 +82,7 @@ body {
 }
 
 .contenido-central {
-    flex-grow: 1;
+    height: calc(100vh - 65px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,16 +98,79 @@ body {
     height: 60vw;
     max-width: 500px;
     max-height: 500px;
-    background-image: url('img/logo.png'); /* Ruta a tu logo */
+    background-image: url('img/Logo.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.1; 
     z-index: 1;
 }
+
 .titulo-central {
-    font-size: 4rem;
-    color: #333;
-    z-index: 2; 
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    font-size: 4rem;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.texto-alerta {
+    color: #0056b3;
+}
+
+.texto-busqueda {
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+}
+
+.seccion-casos {
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px; 
+    background-color: #f9f9f9;
+}
+
+.ficha-caso {
+    text-decoration: none; 
+    color: #333;
+    background-color: #ffffff;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s; 
+}
+
+.ficha-caso:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.ficha-caso img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    background-color: #ddd; 
+}
+
+.info-ficha {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-oscuro {
+    background-color: #1a1a1a; 
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-oscuro p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #cccccc;
 }

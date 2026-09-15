@@ -8,13 +8,12 @@
 </head>
 <body>
 
-    <!-- Barra superior azul claro -->
+    
     <header class="navbar">
         <div class="menu-logo-container">
-            <!-- Botón del menú (Hamburguesa) -->
+            
             <button id="btn-menu" class="btn-menu">☰</button>
             
-            <!-- Logo y Nombre en la barra -->
             <div class="brand">
                 <img src="img/logo.png" alt="Logo Alerta Búsqueda" class="logo-barra">
                 <h1>Alerta Búsqueda</h1>
@@ -32,8 +31,31 @@
 
     <main class="contenido-central">
         <div class="logo-fondo"></div>
-        <h2 class="titulo-central">Alerta Búsqueda</h2>
+        <h2 class="titulo-central">
+            <span class="texto-alerta">Alerta</span>
+            <span class="texto-busqueda">Búsqueda</span>
+        </h2>
     </main>
+
+<section class="seccion-casos">
+    <a href="pagina-caso1.html" class="ficha-caso">
+        <img src="img/foto-ejemplo1.jpg" alt="Foto de persona desaparecida">
+        <div class="info-ficha">
+            <p>Juan Pérez - Visto por última vez en...</p>
+        </div>
+    </a>
+    <a href="pagina-caso2.html" class="ficha-caso">
+        <img src="img/foto-ejemplo2.jpg" alt="Foto de persona desaparecida">
+        <div class="info-ficha">
+            <p>María Gómez - Falta desde el 12/05...</p>
+        </div>
+    </a>
+</section>
+
+<footer class="footer-oscuro">
+    <p>Información importante, líneas de contacto rápido.</p>
+    <p>&copy; 2026 Alerta Búsqueda. Todos los derechos reservados.</p>
+</footer>
     <script>
         const btnMenu = document.getElementById('btn-menu');
         const menuLateral = document.getElementById('menu-lateral');
