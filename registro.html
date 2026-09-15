@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Registro de solicitudes de búsqueda de personas en la plataforma Alerta Búsqueda.">
+
+    <meta name="author" content="Equipo Alerta Búsqueda">
+
+    <title>Registrar búsqueda | Alerta Búsqueda</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio del proyecto -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logo.svg"
+                        alt="Logo de Alerta Búsqueda"
+                        width="45"
+                        height="45">
+
+                    <span class="fw-bold">
+                        Alerta Búsqueda
+                    </span>
+                </a>
+
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="busqueda.html">
+                                Búsqueda
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                aria-current="page"
+                                href="registro.html">
+                                Registrar búsqueda
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="container py-5">
+
+       <div class="text-center mb-5">
+
+    <span class="badge text-bg-primary mb-3">
+        📝 FAMILIARES Y AUTORIDADES
+    </span>
+
+    <h1 class="fw-bold">
+        Registrar una búsqueda
+    </h1>
+
+    <p class="text-secondary mx-auto" style="max-width: 700px;">
+        Completá la información necesaria para iniciar una solicitud
+        de registro de una persona desaparecida.
+        La información deberá ser verificada antes de su publicación.
+    </p>
+
+</div>
+
+
+<!-- FORMULARIO DE REGISTRO -->
+<div class="row justify-content-center">
+
+    <div class="col-12 col-lg-9">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body p-4 p-md-5">
+
+                <h2 class="h4 mb-4">
+                    Datos de la persona buscada
+                </h2>
+
+                <form>
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+
+                            <label for="nombrePersona" class="form-label">
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombrePersona"
+                                placeholder="Ingresá el nombre"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label for="apellidoPersona" class="form-label">
+                                Apellido
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="apellidoPersona"
+                                placeholder="Ingresá el apellido"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label for="edadPersona" class="form-label">
+                                Edad
+                            </label>
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="edadPersona"
+                                min="0"
+                                placeholder="Edad">
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label for="provincia" class="form-label">
+                                Provincia
+                            </label>
+
+                            <select
+                                class="form-select"
+                                id="provincia"
+                                required>
+
+                                <option value="" selected disabled>
+                                    Seleccioná una provincia
+                                </option>
+
+                                <option>
+                                    Tucumán
+                                </option>
+
+                                <option>
+                                    Córdoba
+                                </option>
+
+                                <option>
+                                    Buenos Aires
+                                </option>
+
+                                <option>
+                                    Salta
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label for="fechaDesaparicion" class="form-label">
+                                Fecha de desaparición
+                            </label>
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                id="fechaDesaparicion"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label for="lugar" class="form-label">
+                                Lugar donde fue vista por última vez
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="lugar"
+                                placeholder="Localidad, barrio, dirección aproximada...">
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label for="descripcion" class="form-label">
+                                Descripción
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                id="descripcion"
+                                rows="4"
+                                placeholder="Agregá información que pueda ser útil para la búsqueda"></textarea>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label for="foto" class="form-label">
+                                Fotografía reciente
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="file"
+                                id="foto"
+                                accept="image/*">
+
+                        </div>
+
+                    </div>
+
+
+                    <hr class="my-5">
+
+
+                    <h2 class="h4 mb-4">
+                        Datos de contacto del denunciante
+                    </h2>
+
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+
+                            <label for="nombreContacto" class="form-label">
+                                Nombre y apellido
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombreContacto"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label for="telefonoContacto" class="form-label">
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="telefonoContacto"
+                                placeholder="Ej: 381..."
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="alert alert-warning mt-4"
+                        role="alert">
+
+                        <strong>
+                            Importante:
+                        </strong>
+
+                        la información ingresada deberá ser verificada
+                        antes de su publicación en la plataforma.
+
+                    </div>
+
+
+                    <div
+                        class="d-grid d-md-flex justify-content-md-end mt-4">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-lg">
+
+                            Enviar solicitud
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
