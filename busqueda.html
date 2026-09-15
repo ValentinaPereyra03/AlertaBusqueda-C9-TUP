@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda - Alerta Búsqueda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="menu-logo-container">
+            <button id="btn-menu" class="btn-menu">☰</button>
+            <div class="brand">
+                <img src="img/logo.png" alt="Logo Alerta Búsqueda" class="logo-barra">
+                <h1>Alerta Búsqueda</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav id="menu-lateral" class="menu-lateral">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagina1.html">Búsqueda</a></li>
+            <li><a href="pagina2.html">Página 2</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-buscador">
+        <input type="text" id="input-buscador" placeholder="Buscar por nombre, apellido o zona...">
+    </div>
+
+    <main class="seccion-casos" id="contenedor-fichas">
+        <a href="pagina-caso1.html" class="ficha-caso">
+            <img src="img/foto-ejemplo1.jpg" alt="Foto">
+            <div class="info-ficha">
+                <p class="texto-ficha">Juan Pérez - Visto por última vez en Tucumán...</p>
+            </div>
+        </a>
+
+        <a href="pagina-caso2.html" class="ficha-caso">
+            <img src="img/foto-ejemplo2.jpg" alt="Foto">
+            <div class="info-ficha">
+                <p class="texto-ficha">María Gómez - Falta desde el 12/05 en Córdoba...</p>
+            </div>
+        </a>
+
+        <a href="pagina-caso3.html" class="ficha-caso">
+            <img src="img/foto-ejemplo3.jpg" alt="Foto">
+            <div class="info-ficha">
+                <p class="texto-ficha">Carlos López - Desaparecido en Buenos Aires...</p>
+            </div>
+        </a>
+    </main>
+
+    <footer class="footer-oscuro">
+        <p>Información importante, líneas de contacto rápido.</p>
+        <p>&copy; 2026 Alerta Búsqueda. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const btnMenu = document.getElementById('btn-menu');
+        const menuLateral = document.getElementById('menu-lateral');
+
+        btnMenu.addEventListener('click', () => {
+            menuLateral.classList.toggle('abierto');
+        });
+
+        const inputBuscador = document.getElementById('input-buscador');
+        const fichas = document.querySelectorAll('.ficha-caso');
+
+        inputBuscador.addEventListener('keyup', (e) => {
+
+            const textoBusqueda = e.target.value.toLowerCase();
+
+            fichas.forEach(ficha => {
+                const textoFicha = ficha.querySelector('.texto-ficha').textContent.toLowerCase();
+
+                if(textoFicha.includes(textoBusqueda)) {
+                    ficha.style.display = 'block';
+                } else {
+                    ficha.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

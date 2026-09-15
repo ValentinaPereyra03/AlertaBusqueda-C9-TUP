@@ -18,7 +18,8 @@ body {
     align-items: center;
     padding: 0 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 .menu-logo-container {
@@ -87,6 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: #444444;
 }
 
 .logo-fondo {
@@ -98,7 +100,7 @@ body {
     height: 60vw;
     max-width: 500px;
     max-height: 500px;
-    background-image: url('img/Logo.png'); 
+    background-image: url('img/Logo-Fondo.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -174,3 +176,29 @@ body {
     font-size: 14px;
     color: #cccccc;
 }
+
+/* estilo de pagina "Buscar" */
+.contenedor-buscador {
+    background-color: #f4f4f4;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#input-buscador {
+    width: 100%;
+    max-width: 600px; 
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #add8e6; 
+    border-radius: 25px; 
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: border-color 0.3s;
+}
+
+#input-buscador:focus {
+    border-color: #0056b3; 
+}
+/* fin del estilo de pagina "Buscar" */
