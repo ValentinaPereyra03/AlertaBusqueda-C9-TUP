@@ -331,10 +331,17 @@
 
 </main>
 
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLateral = document.getElementById('menu-lateral');
+
+    btnMenu.addEventListener('click', () => {
+        menuLateral.classList.toggle('abierto');
+    });
+</script>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
