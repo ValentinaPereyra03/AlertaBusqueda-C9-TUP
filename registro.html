@@ -22,64 +22,41 @@
 <body>
 
     <!-- ENCABEZADO -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light shadow-sm">
-            <div class="container">
+   <!-- ENCABEZADO -->
+<header class="navbar">
 
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="img/logo.png"
-                         alt="Logo de Alerta Búsqueda"
-                          width="45"
-                        height="45">
+    <div class="menu-logo-container">
 
-                    <span class="fw-bold">
-                        Alerta Búsqueda
-                    </span>
-                </a>
+        <button id="btn-menu" class="btn-menu">
+            ☰
+        </button>
 
-                <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarPrincipal"
-                    aria-controls="navbarPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir menú">
+        <div class="brand">
 
-                    <span class="navbar-toggler-icon"></span>
+            <img
+                src="img/logo.png"
+                alt="Logo Alerta Búsqueda"
+                class="logo-barra">
 
-                </button>
+            <h1>Alerta Búsqueda</h1>
 
-                <div class="collapse navbar-collapse" id="navbarPrincipal">
+        </div>
 
-                    <ul class="navbar-nav ms-auto">
+    </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                Inicio
-                            </a>
-                        </li>
+</header>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="busqueda.html">
-                                Búsqueda
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                                aria-current="page"
-                                href="registro.html">
-                                Registrar búsqueda
-                            </a>
-                        </li>
+<!-- MENÚ LATERAL -->
+<nav id="menu-lateral" class="menu-lateral">
 
-                    </ul>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="busqueda.html">Búsqueda</a></li>
+        <li><a href="registro.html">Registrar búsqueda</a></li>
+    </ul>
 
-                </div>
-
-            </div>
-        </nav>
-    </header>
+</nav>
 
 
     <!-- CONTENIDO PRINCIPAL -->
