@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Suscribite a las alertas de Alerta Búsqueda para recibir información sobre búsquedas prioritarias de personas desaparecidas.">
+
+    <meta name="author"
+        content="Equipo Alerta Búsqueda">
+
+    <title>Recibir alertas | Alerta Búsqueda</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="menu-logo-container">
+
+            <button
+                id="btn-menu"
+                class="btn-menu"
+                aria-label="Abrir menú">
+
+                ☰
+
+            </button>
+
+
+            <div class="brand">
+
+                <img
+                    src="img/logo.png"
+                    alt="Logo Alerta Búsqueda"
+                    class="logo-barra">
+
+                <h1>
+                    Alerta Búsqueda
+                </h1>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MENÚ LATERAL
+    ========================== -->
+
+    <nav
+        id="menu-lateral"
+        class="menu-lateral"
+        aria-label="Navegación principal">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="busqueda.html">
+                    Búsqueda
+                </a>
+            </li>
+
+            <li>
+                <a href="registro.html">
+                    Registrar búsqueda
+                </a>
+            </li>
+
+            <li>
+                <a href="alertas.html">
+                    Recibir alertas
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+        <section class="container py-5">
+
+
+            <!-- TÍTULO -->
+
+            <div class="text-center mb-5">
+
+                <span class="badge text-bg-primary mb-3">
+                    🔔 NOTIFICACIONES
+                </span>
+
+                <h1 class="fw-bold">
+                    Recibí alertas de búsqueda
+                </h1>
+
+                <p
+                    class="text-secondary mx-auto"
+                    style="max-width: 700px;">
+
+                    Registrate para recibir información sobre
+                    búsquedas prioritarias y novedades relevantes
+                    de acuerdo con las opciones que selecciones.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 FORMULARIO
+            ========================== -->
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-lg-8">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-body p-4 p-md-5">
+
+
+                            <h2 class="h4 mb-4">
+                                Datos de contacto
+                            </h2>
+
+
+                            <form>
+
+
+                                <div class="row g-3">
+
+
+                                    <!-- NOMBRE -->
+
+                                    <div class="col-md-6">
+
+                                        <label
+                                            for="nombre"
+                                            class="form-label">
+
+                                            Nombre y apellido
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="nombre"
+                                            name="nombre"
+                                            placeholder="Ingresá tu nombre"
+                                            required>
+
+                                    </div>
+
+
+
+                                    <!-- TELÉFONO -->
+
+                                    <div class="col-md-6">
+
+                                        <label
+                                            for="telefono"
+                                            class="form-label">
+
+                                            Número de teléfono
+
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            class="form-control"
+                                            id="telefono"
+                                            name="telefono"
+                                            placeholder="Ej: 381..."
+                                            required>
+
+                                    </div>
+
+
+
+                                    <!-- PROVINCIA -->
+
+                                    <div class="col-12">
+
+                                        <label
+                                            for="provincia"
+                                            class="form-label">
+
+                                            Provincia
+
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="provincia"
+                                            name="provincia"
+                                            required>
+
+                                            <option
+                                                value=""
+                                                selected
+                                                disabled>
+
+                                                Seleccioná una provincia
+
+                                            </option>
+
+                                            <option value="tucuman">
+                                                Tucumán
+                                            </option>
+
+                                            <option value="cordoba">
+                                                Córdoba
+                                            </option>
+
+                                            <option value="buenos-aires">
+                                                Buenos Aires
+                                            </option>
+
+                                            <option value="salta">
+                                                Salta
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <hr class="my-5">
+
+
+
+                                <!-- TIPOS DE ALERTA -->
+
+                                <h2 class="h4 mb-3">
+                                    ¿Qué alertas querés recibir?
+                                </h2>
+
+                                <p class="text-secondary">
+                                    Podés seleccionar una o varias opciones.
+                                </p>
+
+
+
+                                <div class="form-check mb-3">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="alertasPrioritarias"
+                                        name="tipoAlerta">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="alertasPrioritarias">
+
+                                        🚨 Alertas prioritarias
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="form-check mb-3">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="menores"
+                                        name="tipoAlerta">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="menores">
+
+                                        👧 Búsquedas de niños y adolescentes
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="form-check mb-3">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="adultosMayores"
+                                        name="tipoAlerta">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="adultosMayores">
+
+                                        👴 Personas mayores
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="form-check mb-3">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="todas"
+                                        name="tipoAlerta">
+
+                                    <label
+                                        class="form-check-label"
+                                        for="todas">
+
+                                        🔎 Todas las búsquedas
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- AVISO -->
+
+                                <div
+                                    class="alert alert-info mt-4"
+                                    role="alert">
+
+                                    <strong>Importante:</strong>
+
+                                    Esta función forma parte de un proyecto
+                                    académico. En una aplicación real sería
+                                    necesario contar con consentimiento y
+                                    protección adecuada de los datos personales.
+
+                                </div>
+
+
+
+                                <!-- CONSENTIMIENTO -->
+
+                                <div class="form-check mt-4">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="consentimiento"
+                                        required>
+
+                                    <label
+                                        class="form-check-label"
+                                        for="consentimiento">
+
+                                        Acepto recibir alertas relacionadas
+                                        con búsquedas de personas.
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- BOTÓN -->
+
+                                <div
+                                    class="d-grid d-md-flex justify-content-md-end mt-4">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary btn-lg">
+
+                                        🔔 Quiero recibir alertas
+
+                                    </button>
+
+                                </div>
+
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer-oscuro">
+
+        <p>
+            Información y colaboración responsable
+            para la búsqueda de personas.
+        </p>
+
+        <p>
+            &copy; 2026 Alerta Búsqueda.
+            Proyecto académico.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         MENÚ LATERAL
+    ========================== -->
+
+    <script>
+
+        const btnMenu =
+            document.getElementById('btn-menu');
+
+        const menuLateral =
+            document.getElementById('menu-lateral');
+
+
+        btnMenu.addEventListener('click', () => {
+
+            menuLateral.classList.toggle('abierto');
+
+        });
+
+    </script>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>
