@@ -7,7 +7,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
+    
     <meta name="description"
         content="Suscribite a las alertas de Alerta Búsqueda para recibir información sobre búsquedas prioritarias de personas desaparecidas.">
 
@@ -17,24 +17,19 @@
     <title>Recibir alertas | Alerta Búsqueda</title>
 
 
-    <!-- Bootstrap -->
+   
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
 
-    <!-- CSS del proyecto -->
+    
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 
 <body>
-
-
-    <!-- =========================
-         ENCABEZADO
-    ========================== -->
 
     <header class="navbar">
 
@@ -67,11 +62,6 @@
 
     </header>
 
-
-
-    <!-- =========================
-         MENÚ LATERAL
-    ========================== -->
 
     <nav
         id="menu-lateral"
@@ -108,18 +98,12 @@
 
     </nav>
 
-
-
-    <!-- =========================
-         CONTENIDO PRINCIPAL
-    ========================== -->
-
     <main>
 
         <section class="container py-5">
 
 
-            <!-- TÍTULO -->
+       
 
             <div class="text-center mb-5">
 
@@ -145,9 +129,6 @@
 
 
 
-            <!-- =========================
-                 FORMULARIO
-            ========================== -->
 
             <div class="row justify-content-center">
 
@@ -193,7 +174,7 @@
 
 
 
-                                    <!-- TELÉFONO -->
+                                    
 
                                     <div class="col-md-6">
 
@@ -217,7 +198,7 @@
 
 
 
-                                    <!-- PROVINCIA -->
+                                 
 
                                     <div class="col-12">
 
@@ -273,7 +254,7 @@
 
 
 
-                                <!-- TIPOS DE ALERTA -->
+                            
 
                                 <h2 class="h4 mb-3">
                                     ¿Qué alertas querés recibir?
@@ -365,7 +346,6 @@
 
 
 
-                                <!-- AVISO -->
 
                                 <div
                                     class="alert alert-info mt-4"
@@ -382,7 +362,7 @@
 
 
 
-                                <!-- CONSENTIMIENTO -->
+                          
 
                                 <div class="form-check mt-4">
 
@@ -405,7 +385,7 @@
 
 
 
-                                <!-- BOTÓN -->
+                           
 
                                 <div
                                     class="d-grid d-md-flex justify-content-md-end mt-4">
@@ -434,13 +414,113 @@
 
         </section>
 
+        </section>
+
+
+        <!-- CÓMO FUNCIONAN LAS ALERTAS -->
+        <section class="container py-5">
+
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">¿Cómo funcionan las alertas?</h2>
+
+                <p class="text-secondary">
+                    Información sobre el sistema de notificaciones de Alerta Búsqueda.
+                </p>
+            </div>
+
+            <div class="accordion" id="accordionAlertas">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+
+                        <button class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#alertaUno">
+
+                            ¿Qué tipo de alertas voy a recibir?
+
+                        </button>
+
+                    </h2>
+
+                    <div id="alertaUno"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionAlertas">
+
+                        <div class="accordion-body">
+                            Podrás elegir recibir alertas prioritarias,
+                            búsquedas de menores, personas mayores o todas
+                            las búsquedas.
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#alertaDos">
+
+                            ¿Puedo seleccionar mi provincia?
+
+                        </button>
+
+                    </h2>
+
+                    <div id="alertaDos"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionAlertas">
+
+                        <div class="accordion-body">
+                            Sí. El formulario permite seleccionar una
+                            provincia para organizar las alertas según
+                            la ubicación indicada.
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#alertaTres">
+
+                            ¿Cómo se utilizan los datos?
+
+                        </button>
+
+                    </h2>
+
+                    <div id="alertaTres"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionAlertas">
+
+                        <div class="accordion-body">
+                            En una implementación real, los datos deberían
+                            utilizarse únicamente para el envío de alertas
+                            y respetando las normas de protección de datos.
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
     </main>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
 
     <footer class="footer-oscuro">
 
@@ -455,12 +535,6 @@
         </p>
 
     </footer>
-
-
-
-    <!-- =========================
-         MENÚ LATERAL
-    ========================== -->
 
     <script>
 
@@ -479,9 +553,6 @@
 
     </script>
 
-
-
-    <!-- Bootstrap JavaScript -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
