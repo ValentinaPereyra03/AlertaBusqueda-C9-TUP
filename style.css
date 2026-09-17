@@ -96,43 +96,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    background-color: #444444;
+    background-color: var(--color-blanco);
 }
 
-.logo-fondo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    height: 60vw;
-    max-width: 500px;
-    max-height: 500px;
-    background-image: url('img/Logo-Fondo.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1; 
-    z-index: 1;
-}
-
-.titulo-central {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 4rem;
-    z-index: 2;
-    font-weight: bold;
-}
-
-.texto-alerta {
-    color: #0056b3;
-}
-
-.texto-busqueda {
-    color: #ffffff; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+.logo-central {
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
 }
 
 .seccion-casos {
