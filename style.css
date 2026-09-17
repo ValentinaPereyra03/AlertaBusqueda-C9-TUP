@@ -1,146 +1,266 @@
 :root {
-    --color-blanco: #f1f3f7;
+    --alto-navbar: 90px;
+
+    --color-primario: #f6f7f9;
     --color-secundario: #f9fafb;
-    --color-blanco: #ffffffeb;
+    --color-blanco: #ffffff;
     --color-texto: #333333;
     --color-fondo-claro: #f4f4f4c2;
     --color-fondo-gris: #f4f4f4c2;
     --color-borde: #dddddd;
+
+    --color-azul: #1f3fb4;
 }
+
+
+/* Mantiene el mismo ancho visual entre páginas */
+html {
+    scrollbar-gutter: stable;
+}
+
+
+/* =========================
+   GENERAL
+   ========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
+
 body {
-    background-color: #ffffff; 
+    background-color: #ffffff;
+
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
+
     overflow-x: hidden;
 }
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
 .navbar {
-    background-color: var(--color-primario); 
-    height: 90px;
+    width: 100%;
+    height: var(--alto-navbar);
+
+    background-color: var(--color-primario);
+
     display: flex;
     align-items: center;
+
     padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
+
+
 .menu-logo-container {
     width: 100%;
     height: 100%;
 
+    position: relative;
+
     display: flex;
     align-items: center;
-
-    position: relative;
 }
+
+
+/* =========================
+   BOTÓN MENÚ
+   ========================= */
+
 .btn-menu {
     position: absolute;
+
     left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
 
     background: none;
     border: none;
 
     display: flex;
     align-items: center;
+
     gap: 15px;
 
     cursor: pointer;
 
-    color: #1f3fb4;
+    color: var(--color-azul);
 
     z-index: 2;
 }
+
+
 .icono-menu {
     font-size: 36px;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
 }
+
+
+.icono-menu.girar {
+    transform: rotate(90deg);
+}
+
 
 .texto-menu {
     font-size: 22px;
     font-weight: 600;
 }
-.btn-menu.girar {
-    transform: rotate(90deg); 
-}
+
+
+/* =========================
+   LOGO DEL ENCABEZADO
+   ========================= */
+
 .brand {
     position: absolute;
 
     left: 50%;
-    top: 35%;
+    top: 50%;
 
     transform: translate(-50%, -50%);
 
     display: flex;
     align-items: center;
-}
-.logo-barra {
-    height: 45px;
-    width: auto;
-    object-fit: contain;
-    transform: scale(4.0)  translateY(4px);
-    transform-origin: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
 }
 
-.brand h1 {
-    font-size: 40x;
-    color: var(--color-blanco);
-    margin-left: 10px;
+
+.logo-barra {
+    width: 350px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    margin: 0;
+    padding: 0;
 }
-/* --- MENÚ LATERAL --- */
+
+
+/* =========================
+   MENÚ LATERAL
+   ========================= */
+
 .menu-lateral {
     position: fixed;
-    top: 65px; 
-    left: -250px; 
+
+    top: var(--alto-navbar);
+    left: -250px;
+
     width: 250px;
-    height: calc(100vh - 65px);
-    background-color: #3c3d3d;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    transition: left 0.3s ease; 
+    height: calc(100vh - var(--alto-navbar));
+
+    background-color: #ffffff;
+
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+
+    transition: left 0.3s ease;
+
     z-index: 999;
 }
+
 
 .menu-lateral.abierto {
     left: 0;
 }
+
+
 .menu-lateral ul {
     list-style: none;
-    padding-top: 20px;
+
+    padding: 0;
+    margin: 0;
 }
+
+
 .menu-lateral ul li {
     padding: 15px 20px;
-    border-bottom: 1px solid #ddd;
+
+    border-bottom: 1px solid #dddddd;
 }
+
+
 .menu-lateral ul li a {
     text-decoration: none;
-    color: #333;
+
+    color: #333333;
+
     font-size: 18px;
-    display: block;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    white-space: nowrap;
+}
+
+.menu-lateral ul li a i {
+    color: #1f3fb4;
+
+    font-size: 22px;
+
+    width: 24px;
+
+    text-align: center;
+
+    flex-shrink: 0;
 }
 
 .menu-lateral ul li a:hover {
-    color: var(--color-primario); 
+    color: var(--color-azul);
 }
+
+
+/* =========================
+   IMAGEN PRINCIPAL
+   ========================= */
+
 .contenido-central {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: var(--color-blanco);
+
     overflow: hidden;
 
     position: relative;
 }
 
+
 .contenido-central::after {
     content: "";
+
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -150,97 +270,332 @@ body {
     background: rgba(20, 50, 120, 0.30);
 }
 
-.logo-central {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-
-    object-fit: cover;
-    object-position: center 25%;
-}
-
 
 .logo-central {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     object-position: center 25%;
+
     display: block;
 }
 
+
+/* =========================
+   FICHAS
+   ========================= */
+
 .seccion-casos {
     padding: 50px 20px;
+
     background-color: var(--color-fondo-gris);
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px; 
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
     justify-items: center;
 }
 
+
 .ficha-caso {
-    text-decoration: none; 
-    color: #333;
+    text-decoration: none;
+
+    color: #333333;
+
     background-color: #ffffff;
+
     width: 250px;
+
     border-radius: 8px;
+
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s; 
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s;
 }
 
+
 .ficha-caso:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 .ficha-caso img {
     width: 100%;
     height: 250px;
-    object-fit: cover; 
-    background-color: #ddd; 
+
+    object-fit: cover;
+
+    background-color: #dddddd;
 }
+
 
 .info-ficha {
     padding: 15px;
+
     text-align: center;
+
     font-size: 14px;
 }
 
+
+/* =========================
+   FOOTER
+   ========================= */
+
 .footer-oscuro {
-    background-color: #1a1a1a; 
+    background-color: #1a1a1a;
+
     color: #ffffff;
+
     text-align: center;
+
     padding: 40px 20px;
 }
 
+
 .footer-oscuro p {
     margin: 5px 0;
+
     font-size: 14px;
+
     color: #cccccc;
 }
 
-/* estilo de pagina "Buscar" */
+
+/* =========================
+   PÁGINA BÚSQUEDA
+   ========================= */
+
 .contenedor-buscador {
     background-color: #f4f4f4;
+
     padding: 30px 20px;
+
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #ddd;
+
+    border-bottom: 1px solid #dddddd;
 }
+
 
 #input-buscador {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
+
     padding: 15px 20px;
+
     font-size: 16px;
-    border: 2px solid var(--color-primario); 
-    border-radius: 25px; 
+
+    border: 2px solid #dddddd;
+
+    border-radius: 25px;
+
     outline: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     transition: border-color 0.3s;
 }
 
+
 #input-buscador:focus {
-    border-color: var(--color-secundario);
+    border-color: var(--color-azul);
 }
-/* fin del estilo de pagina "Buscar" */
+
+/* =========================
+   TEXTO SOBRE IMAGEN INICIO
+   ========================= */
+
+.contenido-hero {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.contenido-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+
+.contenido-hero p {
+    font-size: 19px;
+
+    max-width: 550px;
+
+    margin-bottom: 25px;
+
+    line-height: 1.4;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   BUSCADOR DEL INICIO
+   ========================= */
+
+.buscador-inicio {
+    width: 100%;
+    max-width: 650px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 35px;
+
+    padding: 6px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+.buscador-inicio input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 13px 18px;
+
+    font-size: 16px;
+
+    background: transparent;
+}
+
+
+.buscador-inicio button {
+    border: none;
+
+    background-color: #1f3fb4;
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 28px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.buscador-inicio button:hover {
+    background-color: #173295;
+}
+
+/* =========================
+   INFORMACIÓN DEL INICIO
+   ========================= */
+
+.beneficios-inicio {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    padding: 35px 8%;
+}
+
+
+.beneficio {
+    padding: 10px 35px;
+
+    text-align: center;
+
+    border-right: 1px solid #dbe1eb;
+}
+
+
+.beneficio:last-child {
+    border-right: none;
+}
+
+
+.icono-beneficio {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    border: 2px solid #1f3fb4;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1f3fb4;
+
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+.beneficio h2 {
+    color: #1f3fb4;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+.beneficio p {
+    color: #555555;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.menu-lateral ul li a i {
+    color: #1f3fb4;
+    font-size: 22px;
+    width: 24px;
+    text-align: center;
+}

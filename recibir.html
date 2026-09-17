@@ -26,77 +26,64 @@
     
     <link rel="stylesheet" href="style.css">
 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 
 
 <body>
 
-    <header class="navbar">
+   <header class="navbar">
+    <div class="menu-logo-container">
 
-        <div class="menu-logo-container">
+        <button id="btn-menu" class="btn-menu">
+            <span class="icono-menu">☰</span>
+            <span class="texto-menu">Menú</span>
+        </button>
 
-            <button
-                id="btn-menu"
-                class="btn-menu"
-                aria-label="Abrir menú">
-
-                ☰
-
-            </button>
-
-
-            <div class="brand">
-
-                <img
-                    src="img/logo.png"
-                    alt="Logo Alerta Búsqueda"
-                    class="logo-barra">
-
-                <h1>
-                    Alerta Búsqueda
-                </h1>
-
-            </div>
-
+        <div class="brand">
+            <img
+                src="img/logo-encabezado2 (2).png"
+                alt="Logo de Alerta Búsqueda"
+                class="logo-barra">
         </div>
 
-    </header>
+    </div>
+</header>
 
+<nav id="menu-lateral" class="menu-lateral">
+    <ul>
 
-    <nav
-        id="menu-lateral"
-        class="menu-lateral"
-        aria-label="Navegación principal">
+        <li>
+            <a href="index.html">
+                <i class="bi bi-house-door"></i>
+                Inicio
+            </a>
+        </li>
 
-        <ul>
+        <li>
+            <a href="busqueda.html">
+                <i class="bi bi-search"></i>
+                Búsqueda
+            </a>
+        </li>
 
-            <li>
-                <a href="index.html">
-                    Inicio
-                </a>
-            </li>
+        <li>
+            <a href="registro.html">
+          <i class="bi bi-file-earmark-text"></i>
+                Registrar búsqueda
+            </a>
+        </li>
 
-            <li>
-                <a href="busqueda.html">
-                    Búsqueda
-                </a>
-            </li>
+        <li>
+            <a href="recibir.html">
+                <i class="bi bi-bell"></i>
+                Recibir Alertas
+            </a>
+        </li>
 
-            <li>
-                <a href="registro.html">
-                    Registrar búsqueda
-                </a>
-            </li>
-
-            <li>
-                <a href="alertas.html">
-                    Recibir alertas
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
+    </ul>
+</nav>
 
     <main>
 
@@ -107,13 +94,9 @@
 
             <div class="text-center mb-5">
 
-                <span class="badge text-bg-primary mb-3">
-                    🔔 NOTIFICACIONES
-                </span>
-
-                <h1 class="fw-bold">
-                    Recibí alertas de búsqueda
-                </h1>
+<h1 class="fw-bold">
+    RECIBIR ALERTAS DE BÚSQUEDA
+</h1>
 
                 <p
                     class="text-secondary mx-auto"
@@ -147,106 +130,109 @@
                             <form>
 
 
-                                <div class="row g-3">
+<div class="row g-3">
+
+    <div class="col-md-4">
+
+        <label for="nombre" class="form-label">
+            Nombre y apellido
+        </label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingresá tu nombre"
+            autocomplete="off"
+            required>
+
+    </div>
 
 
-                                    <!-- NOMBRE -->
+    <div class="col-md-4">
 
-                                    <div class="col-md-6">
+        <label for="edad" class="form-label">
+            Edad
+        </label>
 
-                                        <label
-                                            for="nombre"
-                                            class="form-label">
+        <input
+            type="text"
+            class="form-control"
+            id="edad"
+            name="edad"
+            placeholder="Edad"
+            inputmode="numeric"
+            maxlength="3"
+            autocomplete="off"
+            required>
 
-                                            Nombre y apellido
-
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="nombre"
-                                            name="nombre"
-                                            placeholder="Ingresá tu nombre"
-                                            required>
-
-                                    </div>
+    </div>
 
 
+    <div class="col-md-4">
 
-                                    
+        <label for="telefono" class="form-label">
+            Número de teléfono
+        </label>
 
-                                    <div class="col-md-6">
+        <input
+            type="tel"
+            class="form-control"
+            id="telefono"
+            name="telefono"
+            placeholder="Ej: 381..."
+            required>
 
-                                        <label
-                                            for="telefono"
-                                            class="form-label">
-
-                                            Número de teléfono
-
-                                        </label>
-
-                                        <input
-                                            type="tel"
-                                            class="form-control"
-                                            id="telefono"
-                                            name="telefono"
-                                            placeholder="Ej: 381..."
-                                            required>
-
-                                    </div>
-
-
-
+    </div>
                                  
 
-                                    <div class="col-12">
+     <div class="col-12">
 
-                                        <label
-                                            for="provincia"
-                                            class="form-label">
+        <label for="provincia" class="form-label">
+            Provincia
+        </label>
 
-                                            Provincia
+        <select
+            class="form-select"
+            id="provincia"
+            name="provincia"
+            required>
 
-                                        </label>
+            <option value="" selected disabled>
+                Seleccioná una provincia
+            </option>
 
-                                        <select
-                                            class="form-select"
-                                            id="provincia"
-                                            name="provincia"
-                                            required>
+            <option value="buenos-aires">Buenos Aires</option>
+            <option value="caba">Ciudad Autónoma de Buenos Aires</option>
+            <option value="catamarca">Catamarca</option>
+            <option value="chaco">Chaco</option>
+            <option value="chubut">Chubut</option>
+            <option value="cordoba">Córdoba</option>
+            <option value="corrientes">Corrientes</option>
+            <option value="entre-rios">Entre Ríos</option>
+            <option value="formosa">Formosa</option>
+            <option value="jujuy">Jujuy</option>
+            <option value="la-pampa">La Pampa</option>
+            <option value="la-rioja">La Rioja</option>
+            <option value="mendoza">Mendoza</option>
+            <option value="misiones">Misiones</option>
+            <option value="neuquen">Neuquén</option>
+            <option value="rio-negro">Río Negro</option>
+            <option value="salta">Salta</option>
+            <option value="san-juan">San Juan</option>
+            <option value="san-luis">San Luis</option>
+            <option value="santa-cruz">Santa Cruz</option>
+            <option value="santa-fe">Santa Fe</option>
+            <option value="santiago-del-estero">Santiago del Estero</option>
+            <option value="tierra-del-fuego">Tierra del Fuego</option>
+            <option value="tucuman">Tucumán</option>
 
-                                            <option
-                                                value=""
-                                                selected
-                                                disabled>
+        </select>
 
-                                                Seleccioná una provincia
+    </div>
 
-                                            </option>
-
-                                            <option value="tucuman">
-                                                Tucumán
-                                            </option>
-
-                                            <option value="cordoba">
-                                                Córdoba
-                                            </option>
-
-                                            <option value="buenos-aires">
-                                                Buenos Aires
-                                            </option>
-
-                                            <option value="salta">
-                                                Salta
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-
-                                </div>
+</div>
 
 
 
@@ -278,7 +264,7 @@
                                         class="form-check-label"
                                         for="alertasPrioritarias">
 
-                                        🚨 Alertas prioritarias
+                                         Alertas prioritarias
 
                                     </label>
 
@@ -298,7 +284,7 @@
                                         class="form-check-label"
                                         for="menores">
 
-                                        👧 Búsquedas de niños y adolescentes
+                                         Búsquedas de niños y adolescentes
 
                                     </label>
 
@@ -318,7 +304,24 @@
                                         class="form-check-label"
                                         for="adultosMayores">
 
-                                        👴 Personas mayores
+                                         Personas mayores
+
+                                             </label>
+</div>
+
+
+<div class="form-check mb-3">
+    <input
+        class="form-check-input"
+        type="checkbox"
+        id="zona"
+        name="tipoAlerta">
+
+    <label
+        class="form-check-label"
+        for="zona">
+
+        Desapariciones en mi zona
 
                                     </label>
 
@@ -338,7 +341,7 @@
                                         class="form-check-label"
                                         for="todas">
 
-                                        🔎 Todas las búsquedas
+                                         Todas las búsquedas
 
                                     </label>
 
@@ -394,7 +397,7 @@
                                         type="submit"
                                         class="btn btn-primary btn-lg">
 
-                                        🔔 Quiero recibir alertas
+                                         Quiero recibir alertas
 
                                     </button>
 
@@ -521,44 +524,97 @@
 
     </main>
 
-    <footer class="footer-oscuro">
-
-        <p>
-            Información y colaboración responsable
-            para la búsqueda de personas.
-        </p>
-
-        <p>
-            &copy; 2026 Alerta Búsqueda.
-            Proyecto académico.
-        </p>
-
-    </footer>
-
-    <script>
-
-        const btnMenu =
-            document.getElementById('btn-menu');
-
-        const menuLateral =
-            document.getElementById('menu-lateral');
 
 
-        btnMenu.addEventListener('click', () => {
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLateral = document.getElementById('menu-lateral');
+    const iconoMenu = document.querySelector('.icono-menu');
+    const textoMenu = document.querySelector('.texto-menu');
 
-            menuLateral.classList.toggle('abierto');
-            
-            if (menuLateral.classList.contains('abierto')) {
-                btnMenu.innerHTML = '✖';
-                btnMenu.classList.add('girar'); 
-            } else {
-                btnMenu.innerHTML = '☰';
-                btnMenu.classList.remove('girar'); 
-            }
+    function cerrarMenu() {
+        menuLateral.classList.remove('abierto');
 
-        });
+        iconoMenu.textContent = '☰';
+        textoMenu.textContent = 'Menú';
 
-    </script>
+        iconoMenu.classList.remove('girar');
+    }
+
+    btnMenu.addEventListener('click', () => {
+
+        menuLateral.classList.toggle('abierto');
+
+        if (menuLateral.classList.contains('abierto')) {
+
+            iconoMenu.textContent = '✖';
+            textoMenu.textContent = 'Cerrar';
+
+            iconoMenu.classList.add('girar');
+
+        } else {
+
+            cerrarMenu();
+
+        }
+
+    });
+
+    document.addEventListener('click', (event) => {
+
+        const clickDentroMenu = menuLateral.contains(event.target);
+        const clickEnBoton = btnMenu.contains(event.target);
+
+        if (
+            menuLateral.classList.contains('abierto') &&
+            !clickDentroMenu &&
+            !clickEnBoton
+        ) {
+            cerrarMenu();
+        }
+
+    });
+
+    /* VALIDACIÓN DEL FORMULARIO DE ALERTAS */
+
+const nombre = document.getElementById('nombre');
+const edad = document.getElementById('edad');
+
+
+/* Nombre y apellido: solamente letras y espacios */
+
+nombre.addEventListener('input', () => {
+
+    nombre.value = nombre.value.replace(
+        /[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g,
+        ''
+    );
+
+});
+
+
+/* Edad: solamente números */
+
+edad.addEventListener('input', () => {
+
+    edad.value = edad.value.replace(
+        /[^0-9]/g,
+        ''
+    );
+
+});
+
+const telefono = document.getElementById('telefono');
+
+telefono.addEventListener('input', () => {
+
+    telefono.value = telefono.value.replace(
+        /[^0-9+\-]/g,
+        ''
+    );
+
+});
+</script>
 
 
     <script
