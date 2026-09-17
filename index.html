@@ -4,195 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alerta Búsqueda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
-    
-    <header class="navbar">
-        <div class="menu-logo-container">
-            
-           <button id="btn-menu" class="btn-menu">
-           <span class="icono-menu">☰</span>
-            <span class="texto-menu">Menú</span>
-         </button>
-            
-   <div class="brand">
-    <img
-        src="img/logo-encabezado2 (2).png"
-        alt="Logo de Alerta Búsqueda"
-        class="logo-barra">
+<nav class="navbar bg-white fixed-top shadow-sm px-3 py-1">
+    <div class="container-fluid">
+        <!-- Botón Hamburguesa (con texto un poco más chico) -->
+        <button class="navbar-toggler border-0 text-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
+            <span class="fs-3">☰ <span class="fs-6 fw-bold ms-1">Menú</span></span>
+        </button>
 
-</div>
-        </div>
-    </header>
+        <!-- Logo centrado (Fijamos el alto para afinar la barra) -->
+        <a class="navbar-brand mx-auto py-0" href="index.html">
+            <img src="img/logo-encabezado2 (2).png" alt="Logo de Alerta Búsqueda" style="height: 55px; width: auto; object-fit: contain;">
+        </a>
+    </div>
+</nav>
 
-    <!-- Menú lateral (Oculto por defecto) -->
-    <nav id="menu-lateral" class="menu-lateral">
-        <ul>
-<li>
-    <a href="index.html">
-        <i class="bi bi-house-door"></i>
-        Inicio
-    </a>
-</li>
-
-<li>
-    <a href="busqueda.html">
-    <i class="bi bi-search"></i>
-        Búsqueda
-    </a>
-</li>
-
-<li>
-    <a href="registro.html">
-  <i class="bi bi-file-earmark-text"></i>
-        Registrar búsqueda
-    </a>
-</li>
-
-<li>
-    <a href="recibir.html">
-        <i class="bi bi-bell"></i>
-        Recibir Alertas
-    </a>
-</li>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title text-primary fw-bold" id="menuLateralLabel">Alerta Búsqueda</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column fs-5 gap-3 mt-2">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="index.html"><i class="bi bi-house-door text-primary me-2"></i> Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="busqueda.html"><i class="bi bi-search text-primary me-2"></i> Búsqueda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="registro.html"><i class="bi bi-file-earmark-text text-primary me-2"></i> Registrar búsqueda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="recibir.html"><i class="bi bi-bell text-primary me-2"></i> Recibir Alertas</a>
+            </li>
         </ul>
-    </nav>
+    </div>
+</div>
 
-<main class="contenido-central">
 
-    <img
-        src="img/fondopersonas.png"
-        alt="Red de personas conectadas"
-        class="logo-central">
+<main class="position-relative d-flex align-items-center justify-content-center text-center w-100 mt-5" style="min-height: 70vh; background-color: #f8f9fa; overflow: hidden;">
 
-    <div class="contenido-hero">
-
-        <h1 class="titulo-hero fw-bold text-uppercase mb-3">
-                 CADA DATO CUENTA
-         </h1>
-
-        <p class="texto-hero fw-medium">
-        Compartir información responsable puede ayudar
-        a encontrar a una persona.
-          </p>
-
-        <form class="buscador-inicio" action="busqueda.html" method="get">
-
-            <input
-                type="text"
-                name="q"
-                placeholder="Buscar por nombre, apellido o zona...">
-
-            <button type="submit">
-                Buscar
-            </button>
-
+    <img src="img/fondopersonas.png" alt="Red de personas conectadas" class="position-absolute w-100 h-100 top-0 start-0" style="object-fit: cover; z-index: 1;">
+    <div class="container position-relative px-3" style="z-index: 2; max-width: 700px;">
+        
+        <h1 class="display-4 fw-bolder text-dark mb-3">CADA DATO CUENTA</h1>
+        <p class="lead text-secondary fw-medium mb-4">
+            Compartir información responsable puede ayudar a encontrar a una persona.
+        </p>
+        <form class="input-group input-group-lg shadow rounded-pill overflow-hidden mx-auto" action="busqueda.html" method="get" style="max-width: 600px;">
+            <input type="text" name="q" class="form-control border-0 px-4" placeholder="Buscar por nombre, apellido o zona..." aria-label="Buscar" style="box-shadow: none;">
+            <button type="submit" class="btn btn-primary px-4 fw-bold">Buscar</button>
         </form>
 
     </div>
-
 </main>
 
-<section class="beneficios-inicio">
-
-    <div class="beneficio">
-
-        <div class="icono-beneficio">
-            i
+<section class="container my-5 pt-4">
+    <div class="row text-center g-4">
+        
+        <div class="col-md-4 border-end border-light-subtle">
+            <div class="display-6 text-primary mb-3">
+                <i class="bi bi-info-circle"></i>
+            </div>
+            <h2 class="h6 text-primary fw-bold">INFORMACIÓN RESPONSABLE</h2>
+            <p class="text-muted small px-3">Consultá información clara sobre las búsquedas publicadas.</p>
         </div>
 
-        <h2>INFORMACIÓN RESPONSABLE</h2>
-
-        <p>
-            Consultá información clara sobre las búsquedas publicadas.
-        </p>
-
-    </div>
-
-
-    <div class="beneficio">
-
-        <div class="icono-beneficio">
-            ◉
+        <div class="col-md-4 border-end border-light-subtle">
+            <div class="display-6 text-primary mb-3">
+                <i class="bi bi-geo-alt"></i>
+            </div>
+            <h2 class="h6 text-primary fw-bold">ALERTAS POR ZONA</h2>
+            <p class="text-muted small px-3">Recibí avisos relacionados con búsquedas cercanas a tu ubicación.</p>
         </div>
 
-        <h2>ALERTAS POR ZONA</h2>
-
-        <p>
-            Recibí avisos relacionados con búsquedas cercanas a tu ubicación.
-        </p>
-
-    </div>
-
-
-    <div class="beneficio">
-
-        <div class="icono-beneficio">
-            ✓
+        <div class="col-md-4">
+            <div class="display-6 text-primary mb-3">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <h2 class="h6 text-primary fw-bold">COLABORACIÓN CIUDADANA</h2>
+            <p class="text-muted small px-3">La información aportada de forma responsable puede ser importante.</p>
         </div>
 
-        <h2>COLABORACIÓN CIUDADANA</h2>
-
-        <p>
-            La información aportada de forma responsable puede ser importante.
-        </p>
-
     </div>
-
 </section>
-
-
-<script>
-    const btnMenu = document.getElementById('btn-menu');
-    const menuLateral = document.getElementById('menu-lateral');
-    const iconoMenu = document.querySelector('.icono-menu');
-    const textoMenu = document.querySelector('.texto-menu');
-
-    function cerrarMenu() {
-        menuLateral.classList.remove('abierto');
-
-        iconoMenu.textContent = '☰';
-        textoMenu.textContent = 'Menú';
-
-        iconoMenu.classList.remove('girar');
-    }
-
-    btnMenu.addEventListener('click', () => {
-
-        menuLateral.classList.toggle('abierto');
-
-        if (menuLateral.classList.contains('abierto')) {
-
-            iconoMenu.textContent = '✖';
-            textoMenu.textContent = 'Cerrar';
-
-            iconoMenu.classList.add('girar');
-
-        } else {
-
-            cerrarMenu();
-
-        }
-
-    });
-
-    document.addEventListener('click', (event) => {
-
-        const clickDentroMenu = menuLateral.contains(event.target);
-        const clickEnBoton = btnMenu.contains(event.target);
-
-        if (
-            menuLateral.classList.contains('abierto') &&
-            !clickDentroMenu &&
-            !clickEnBoton
-        ) {
-            cerrarMenu();
-        }
-
-    });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
