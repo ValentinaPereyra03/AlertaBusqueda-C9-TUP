@@ -108,11 +108,11 @@ body {
 
 .seccion-casos {
     padding: 50px 20px;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
+    background-color: var(--color-fondo-gris);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px; 
-    background-color: #f9f9f9;
+    justify-items: center;
 }
 
 .ficha-caso {
@@ -171,7 +171,7 @@ body {
     max-width: 600px; 
     padding: 15px 20px;
     font-size: 16px;
-    border: 2px solid #add8e6; 
+    border: 2px solid var(--color-primario); 
     border-radius: 25px; 
     outline: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -179,6 +179,6 @@ body {
 }
 
 #input-buscador:focus {
-    border-color: #0056b3; 
+    border-color: var(--color-secundario);
 }
 /* fin del estilo de pagina "Buscar" */
