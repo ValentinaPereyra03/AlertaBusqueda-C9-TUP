@@ -42,6 +42,10 @@ body {
     font-size: 28px;
     cursor: pointer;
     color: var(--color-blanco);
+    transition: transform 0.3s ease;
+}
+.btn-menu.girar {
+    transform: rotate(90deg); 
 }
 .brand {
     display: flex;
