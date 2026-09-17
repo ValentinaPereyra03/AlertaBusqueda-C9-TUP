@@ -32,11 +32,7 @@
     </nav>
 
     <main class="contenido-central">
-        <div class="logo-fondo"></div>
-        <h2 class="titulo-central">
-            <span class="texto-alerta">Alerta</span>
-            <span class="texto-busqueda">Búsqueda</span>
-        </h2>
+        <img src="img/Logo-Fondo.png" alt="Logo central de Alerta Búsqueda" class="logo-central">
     </main>
 
 <section class="seccion-casos">
@@ -64,6 +60,14 @@
 
         btnMenu.addEventListener('click', () => {
             menuLateral.classList.toggle('abierto');
+            
+            if (menuLateral.classList.contains('abierto')) {
+                btnMenu.innerHTML = '✖';
+                btnMenu.classList.add('girar'); 
+            } else {
+                btnMenu.innerHTML = '☰';
+                btnMenu.classList.remove('girar'); 
+            }
         });
     </script>
 </body>

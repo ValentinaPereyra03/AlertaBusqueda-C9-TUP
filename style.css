@@ -1,3 +1,12 @@
+:root {
+    --color-primario: #f81616;
+    --color-secundario: #db0303;
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --color-fondo-claro: #f4f4f4;
+    --color-fondo-gris: #f9f9f9;
+    --color-borde: #dddddd;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 .navbar {
-    background-color: #add8e6; 
+    background-color: var(--color-primario); 
     height: 65px;
     display: flex;
     align-items: center;
@@ -32,7 +41,11 @@ body {
     border: none;
     font-size: 28px;
     cursor: pointer;
-    color: #333;
+    color: var(--color-blanco);
+    transition: transform 0.3s ease;
+}
+.btn-menu.girar {
+    transform: rotate(90deg); 
 }
 .brand {
     display: flex;
@@ -45,7 +58,7 @@ body {
 }
 .brand h1 {
     font-size: 22px;
-    color: #333;
+    color: var(--color-blanco);
 }
 /* --- MENÚ LATERAL --- */
 .menu-lateral {
@@ -79,7 +92,7 @@ body {
 }
 
 .menu-lateral ul li a:hover {
-    color: #add8e6; 
+    color: var(--color-primario); 
 }
 
 .contenido-central {
@@ -87,52 +100,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    background-color: #444444;
+    background-color: var(--color-blanco);
 }
 
-.logo-fondo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    height: 60vw;
-    max-width: 500px;
-    max-height: 500px;
-    background-image: url('img/Logo-Fondo.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1; 
-    z-index: 1;
-}
-
-.titulo-central {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 4rem;
-    z-index: 2;
-    font-weight: bold;
-}
-
-.texto-alerta {
-    color: #0056b3;
-}
-
-.texto-busqueda {
-    color: #ffffff; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+.logo-central {
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
 }
 
 .seccion-casos {
     padding: 50px 20px;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
+    background-color: var(--color-fondo-gris);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px; 
-    background-color: #f9f9f9;
+    justify-items: center;
 }
 
 .ficha-caso {
@@ -191,7 +175,7 @@ body {
     max-width: 600px; 
     padding: 15px 20px;
     font-size: 16px;
-    border: 2px solid #add8e6; 
+    border: 2px solid var(--color-primario); 
     border-radius: 25px; 
     outline: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -199,6 +183,6 @@ body {
 }
 
 #input-buscador:focus {
-    border-color: #0056b3; 
+    border-color: var(--color-secundario);
 }
 /* fin del estilo de pagina "Buscar" */

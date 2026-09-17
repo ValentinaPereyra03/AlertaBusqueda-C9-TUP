@@ -338,6 +338,13 @@
 
     btnMenu.addEventListener('click', () => {
         menuLateral.classList.toggle('abierto');
+        if (menuLateral.classList.contains('abierto')) {
+                btnMenu.innerHTML = '✖';
+                btnMenu.classList.add('girar'); 
+            } else {
+                btnMenu.innerHTML = '☰';
+                btnMenu.classList.remove('girar'); 
+            }
     });
 </script>
 
