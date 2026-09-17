@@ -1,3 +1,12 @@
+:root {
+    --color-primario: #f81616;
+    --color-secundario: #db0303;
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --color-fondo-claro: #f4f4f4;
+    --color-fondo-gris: #f9f9f9;
+    --color-borde: #dddddd;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 .navbar {
-    background-color: #add8e6; 
+    background-color: var(--color-primario); 
     height: 65px;
     display: flex;
     align-items: center;
@@ -32,7 +41,7 @@ body {
     border: none;
     font-size: 28px;
     cursor: pointer;
-    color: #333;
+    color: var(--color-blanco);
 }
 .brand {
     display: flex;
@@ -45,7 +54,7 @@ body {
 }
 .brand h1 {
     font-size: 22px;
-    color: #333;
+    color: var(--color-blanco);
 }
 /* --- MENÚ LATERAL --- */
 .menu-lateral {
@@ -79,7 +88,7 @@ body {
 }
 
 .menu-lateral ul li a:hover {
-    color: #add8e6; 
+    color: var(--color-primario); 
 }
 
 .contenido-central {
