@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alerta Búsqueda</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -30,51 +31,166 @@
     <!-- Menú lateral (Oculto por defecto) -->
     <nav id="menu-lateral" class="menu-lateral">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="busqueda.html">Búsqueda</a></li>
-            <li><a href="registro.html">Registrar búsqueda</a></li>
-            <li><a href="recibir.html">Recibir Alertas</a></li>
+<li>
+    <a href="index.html">
+        <i class="bi bi-house-door"></i>
+        Inicio
+    </a>
+</li>
+
+<li>
+    <a href="busqueda.html">
+    <i class="bi bi-search"></i>
+        Búsqueda
+    </a>
+</li>
+
+<li>
+    <a href="registro.html">
+  <i class="bi bi-file-earmark-text"></i>
+        Registrar búsqueda
+    </a>
+</li>
+
+<li>
+    <a href="recibir.html">
+        <i class="bi bi-bell"></i>
+        Recibir Alertas
+    </a>
+</li>
         </ul>
     </nav>
 
-    <main class="contenido-central">
-        <img src="img/fondopersonas.png" alt="Logo central de Alerta Búsqueda" class="logo-central">
-    </main>
+<main class="contenido-central">
 
-<section class="seccion-casos">
-    <a href="pagina-caso1.html" class="ficha-caso">
-        <img src="img/foto-ejemplo1.jpg" alt="Foto de persona desaparecida">
-        <div class="info-ficha">
-            <p>Juan Pérez - Visto por última vez en...</p>
+    <img
+        src="img/fondopersonas.png"
+        alt="Red de personas conectadas"
+        class="logo-central">
+
+    <div class="contenido-hero">
+
+        <h1>CADA DATO CUENTA</h1>
+
+        <p>
+            Compartir información responsable puede ayudar
+            a encontrar a una persona.
+        </p>
+
+        <form class="buscador-inicio" action="busqueda.html" method="get">
+
+            <input
+                type="text"
+                name="q"
+                placeholder="Buscar por nombre, apellido o zona...">
+
+            <button type="submit">
+                Buscar
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<section class="beneficios-inicio">
+
+    <div class="beneficio">
+
+        <div class="icono-beneficio">
+            i
         </div>
-    </a>
-    <a href="pagina-caso2.html" class="ficha-caso">
-        <img src="img/foto-ejemplo2.jpg" alt="Foto de persona desaparecida">
-        <div class="info-ficha">
-            <p>María Gómez - Falta desde el 12/05...</p>
+
+        <h2>INFORMACIÓN RESPONSABLE</h2>
+
+        <p>
+            Consultá información clara sobre las búsquedas publicadas.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio">
+
+        <div class="icono-beneficio">
+            ◉
         </div>
-    </a>
+
+        <h2>ALERTAS POR ZONA</h2>
+
+        <p>
+            Recibí avisos relacionados con búsquedas cercanas a tu ubicación.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio">
+
+        <div class="icono-beneficio">
+            ✓
+        </div>
+
+        <h2>COLABORACIÓN CIUDADANA</h2>
+
+        <p>
+            La información aportada de forma responsable puede ser importante.
+        </p>
+
+    </div>
+
 </section>
 
-<footer class="footer-oscuro">
-    <p>Información importante, líneas de contacto rápido.</p>
-    <p>&copy; 2026 Alerta Búsqueda. Todos los derechos reservados.</p>
-</footer>
-    <script>
-        const btnMenu = document.getElementById('btn-menu');
-        const menuLateral = document.getElementById('menu-lateral');
 
-        btnMenu.addEventListener('click', () => {
-            menuLateral.classList.toggle('abierto');
-            
-            if (menuLateral.classList.contains('abierto')) {
-                btnMenu.innerHTML = '✖';
-                btnMenu.classList.add('girar'); 
-            } else {
-                btnMenu.innerHTML = '☰';
-                btnMenu.classList.remove('girar'); 
-            }
-        });
-    </script>
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLateral = document.getElementById('menu-lateral');
+    const iconoMenu = document.querySelector('.icono-menu');
+    const textoMenu = document.querySelector('.texto-menu');
+
+    function cerrarMenu() {
+        menuLateral.classList.remove('abierto');
+
+        iconoMenu.textContent = '☰';
+        textoMenu.textContent = 'Menú';
+
+        iconoMenu.classList.remove('girar');
+    }
+
+    btnMenu.addEventListener('click', () => {
+
+        menuLateral.classList.toggle('abierto');
+
+        if (menuLateral.classList.contains('abierto')) {
+
+            iconoMenu.textContent = '✖';
+            textoMenu.textContent = 'Cerrar';
+
+            iconoMenu.classList.add('girar');
+
+        } else {
+
+            cerrarMenu();
+
+        }
+
+    });
+
+    document.addEventListener('click', (event) => {
+
+        const clickDentroMenu = menuLateral.contains(event.target);
+        const clickEnBoton = btnMenu.contains(event.target);
+
+        if (
+            menuLateral.classList.contains('abierto') &&
+            !clickDentroMenu &&
+            !clickEnBoton
+        ) {
+            cerrarMenu();
+        }
+
+    });
+</script>
 </body>
 </html>

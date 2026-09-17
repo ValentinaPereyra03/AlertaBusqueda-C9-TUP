@@ -17,6 +17,8 @@
 
     <!-- CSS propio del proyecto -->
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -24,39 +26,55 @@
     <!-- ENCABEZADO -->
    <!-- ENCABEZADO -->
 <header class="navbar">
-
     <div class="menu-logo-container">
 
         <button id="btn-menu" class="btn-menu">
-            ☰
+            <span class="icono-menu">☰</span>
+            <span class="texto-menu">Menú</span>
         </button>
 
         <div class="brand">
-
             <img
-                src="img/logo.png"
-                alt="Logo Alerta Búsqueda"
+                src="img/logo-encabezado2 (2).png"
+                alt="Logo de Alerta Búsqueda"
                 class="logo-barra">
-
-            <h1>Alerta Búsqueda</h1>
-
         </div>
 
     </div>
-
 </header>
 
-
-<!-- MENÚ LATERAL -->
 <nav id="menu-lateral" class="menu-lateral">
-
     <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="busqueda.html">Búsqueda</a></li>
-        <li><a href="registro.html">Registrar búsqueda</a></li>
-        <li><a href="recibir.html">Recibir Alertas</a></li>
-    </ul>
 
+        <li>
+            <a href="index.html">
+                <i class="bi bi-house-door"></i>
+                Inicio
+            </a>
+        </li>
+
+        <li>
+            <a href="busqueda.html">
+                <i class="bi bi-search"></i>
+                Búsqueda
+            </a>
+        </li>
+
+        <li>
+            <a href="registro.html">
+          <i class="bi bi-file-earmark-text"></i>
+                Registrar búsqueda
+            </a>
+        </li>
+
+        <li>
+            <a href="recibir.html">
+                <i class="bi bi-bell"></i>
+                Recibir Alertas
+            </a>
+        </li>
+
+    </ul>
 </nav>
 
 
@@ -65,14 +83,10 @@
 
         <section class="container py-5">
 
-       <div class="text-center mb-5">
-
-    <span class="badge text-bg-primary mb-3">
-        📝 FAMILIARES Y AUTORIDADES
-    </span>
+<div class="text-center mb-5">
 
     <h1 class="fw-bold">
-        Registrar una búsqueda
+        REGISTRAR BÚSQUEDA
     </h1>
 
     <p class="text-secondary mx-auto" style="max-width: 700px;">
@@ -107,46 +121,50 @@
                                 Nombre
                             </label>
 
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="nombrePersona"
-                                placeholder="Ingresá el nombre"
-                                required>
+                           <input
+                           type="text"
+                           class="form-control"
+                           id="nombrePersona"
+                           placeholder="Ingresá el nombre"
+                           autocomplete="off"
+                           required>
 
                         </div>
 
 
                         <div class="col-md-6">
+ 
+                         <label for="apellidoPersona" class="form-label">
+                          Apellido
+                         </label>
 
-                            <label for="apellidoPersona" class="form-label">
-                                Apellido
-                            </label>
-
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="apellidoPersona"
-                                placeholder="Ingresá el apellido"
-                                required>
-
-                        </div>
-
-
-                        <div class="col-md-4">
-
-                            <label for="edadPersona" class="form-label">
-                                Edad
-                            </label>
-
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="edadPersona"
-                                min="0"
-                                placeholder="Edad">
+                         <input
+                         type="text"
+                         class="form-control"
+                         id="apellidoPersona"
+                         placeholder="Ingresá el apellido"
+                         autocomplete="off"
+                         required>
 
                         </div>
+
+
+  <div class="col-md-4">
+
+    <label for="edadPersona" class="form-label">
+        Edad
+    </label>
+
+    <input
+        type="text"
+        class="form-control"
+        id="edadPersona"
+        placeholder="Edad"
+        inputmode="numeric"
+        maxlength="3"
+        autocomplete="off">
+
+</div>
 
 
                         <div class="col-md-4">
@@ -156,29 +174,41 @@
                             </label>
 
                             <select
-                                class="form-select"
-                                id="provincia"
-                                required>
+                                <select
+    class="form-select"
+    id="provincia"
+    required>
 
-                                <option value="" selected disabled>
-                                    Seleccioná una provincia
-                                </option>
+    <option value="" selected disabled>
+        Seleccioná una provincia
+    </option>
 
-                                <option>
-                                    Tucumán
-                                </option>
+    <option value="buenos-aires">Buenos Aires</option>
+    <option value="caba">Ciudad Autónoma de Buenos Aires</option>
+    <option value="catamarca">Catamarca</option>
+    <option value="chaco">Chaco</option>
+    <option value="chubut">Chubut</option>
+    <option value="cordoba">Córdoba</option>
+    <option value="corrientes">Corrientes</option>
+    <option value="entre-rios">Entre Ríos</option>
+    <option value="formosa">Formosa</option>
+    <option value="jujuy">Jujuy</option>
+    <option value="la-pampa">La Pampa</option>
+    <option value="la-rioja">La Rioja</option>
+    <option value="mendoza">Mendoza</option>
+    <option value="misiones">Misiones</option>
+    <option value="neuquen">Neuquén</option>
+    <option value="rio-negro">Río Negro</option>
+    <option value="salta">Salta</option>
+    <option value="san-juan">San Juan</option>
+    <option value="san-luis">San Luis</option>
+    <option value="santa-cruz">Santa Cruz</option>
+    <option value="santa-fe">Santa Fe</option>
+    <option value="santiago-del-estero">Santiago del Estero</option>
+    <option value="tierra-del-fuego">Tierra del Fuego</option>
+    <option value="tucuman">Tucumán</option>
 
-                                <option>
-                                    Córdoba
-                                </option>
-
-                                <option>
-                                    Buenos Aires
-                                </option>
-
-                                <option>
-                                    Salta
-                                </option>
+</select>
 
                             </select>
 
@@ -250,44 +280,65 @@
                     <hr class="my-5">
 
 
-                    <h2 class="h4 mb-4">
-                        Datos de contacto del denunciante
-                    </h2>
+<h2 class="h4 mb-4">
+    Datos de contacto del denunciante
+</h2>
+
+<div class="row g-3">
+
+    <div class="col-md-4">
+
+        <label for="nombreContacto" class="form-label">
+            Nombre y apellido
+        </label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="nombreContacto"
+            placeholder="Ingresá nombre y apellido"
+            autocomplete="off"
+            required>
+
+    </div>
 
 
-                    <div class="row g-3">
+    <div class="col-md-4">
 
-                        <div class="col-md-6">
+        <label for="dniContacto" class="form-label">
+            DNI
+        </label>
 
-                            <label for="nombreContacto" class="form-label">
-                                Nombre y apellido
-                            </label>
+        <input
+            type="text"
+            class="form-control"
+            id="dniContacto"
+            placeholder="Ej: 40123456"
+            inputmode="numeric"
+            maxlength="8"
+            autocomplete="off"
+            required>
 
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="nombreContacto"
-                                required>
-
-                        </div>
+    </div>
 
 
-                        <div class="col-md-6">
+    <div class="col-md-4">
 
-                            <label for="telefonoContacto" class="form-label">
-                                Teléfono
-                            </label>
+        <label for="telefonoContacto" class="form-label">
+            Teléfono
+        </label>
 
-                            <input
-                                type="tel"
-                                class="form-control"
-                                id="telefonoContacto"
-                                placeholder="Ej: 381..."
-                                required>
+        <input
+            type="tel"
+            class="form-control"
+            id="telefonoContacto"
+            placeholder="Ej: +54381-251-9874"
+            autocomplete="off"
+            required>
 
-                        </div>
+    </div>
 
-                    </div>
+</div>
 
 
                     <div
@@ -333,23 +384,110 @@
 </main>
 
 <script>
+    /* =========================
+       MENÚ LATERAL
+       ========================= */
+
     const btnMenu = document.getElementById('btn-menu');
     const menuLateral = document.getElementById('menu-lateral');
+    const iconoMenu = document.querySelector('.icono-menu');
+    const textoMenu = document.querySelector('.texto-menu');
+
+    function cerrarMenu() {
+        menuLateral.classList.remove('abierto');
+
+        iconoMenu.textContent = '☰';
+        textoMenu.textContent = 'Menú';
+
+        iconoMenu.classList.remove('girar');
+    }
 
     btnMenu.addEventListener('click', () => {
         menuLateral.classList.toggle('abierto');
+
         if (menuLateral.classList.contains('abierto')) {
-                btnMenu.innerHTML = '✖';
-                btnMenu.classList.add('girar'); 
-            } else {
-                btnMenu.innerHTML = '☰';
-                btnMenu.classList.remove('girar'); 
-            }
+            iconoMenu.textContent = '✖';
+            textoMenu.textContent = 'Cerrar';
+
+            iconoMenu.classList.add('girar');
+        } else {
+            cerrarMenu();
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        const clickDentroMenu = menuLateral.contains(event.target);
+        const clickEnBoton = btnMenu.contains(event.target);
+
+        if (
+            menuLateral.classList.contains('abierto') &&
+            !clickDentroMenu &&
+            !clickEnBoton
+        ) {
+            cerrarMenu();
+        }
+    });
+
+
+    /* =========================
+       VALIDACIÓN DE CAMPOS
+       ========================= */
+
+    const nombrePersona = document.getElementById('nombrePersona');
+    const apellidoPersona = document.getElementById('apellidoPersona');
+    const nombreContacto = document.getElementById('nombreContacto');
+    const dniContacto = document.getElementById('dniContacto');
+    const telefonoContacto = document.getElementById('telefonoContacto');
+    const edadPersona = document.getElementById('edadPersona');
+
+
+    /* EDAD: únicamente números */
+
+    edadPersona.addEventListener('input', () => {
+        edadPersona.value = edadPersona.value.replace(
+            /[^0-9]/g,
+            ''
+        );
+    });
+
+
+    /* SOLO LETRAS, ESPACIOS Y TILDES */
+
+    function permitirSoloLetras(campo) {
+        campo.addEventListener('input', () => {
+            campo.value = campo.value.replace(
+                /[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g,
+                ''
+            );
+        });
+    }
+
+    permitirSoloLetras(nombrePersona);
+    permitirSoloLetras(apellidoPersona);
+    permitirSoloLetras(nombreContacto);
+
+
+    /* DNI: únicamente números */
+
+    dniContacto.addEventListener('input', () => {
+        dniContacto.value = dniContacto.value.replace(
+            /[^0-9]/g,
+            ''
+        );
+    });
+
+
+    /* TELÉFONO: números, + y - */
+
+    telefonoContacto.addEventListener('input', () => {
+        telefonoContacto.value = telefonoContacto.value.replace(
+            /[^0-9+\-]/g,
+            ''
+        );
     });
 </script>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
