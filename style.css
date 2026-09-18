@@ -706,4 +706,17 @@ body {
     }
 
 }
-/*
+*/
+
+.tarjeta-beneficio {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+.tarjeta-beneficio:hover {
+    transform: translateY(-8px); 
+    /* Los primeros 3 números son el color (128,128,128 es gris). El último (0.3) es la transparencia */
+    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527); 
+    
+    background-color: #ffffff;
+}
