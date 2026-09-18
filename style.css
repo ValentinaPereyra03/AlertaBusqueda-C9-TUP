@@ -13,15 +13,12 @@
 }
 
 
-/* Mantiene el mismo ancho visual entre páginas */
+/*
 html {
     scrollbar-gutter: stable;
 }
 
 
-/* =========================
-   GENERAL
-   ========================= */
 
 * {
     margin: 0;
@@ -42,10 +39,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =========================
-   ENCABEZADO
-   ========================= */
 
 .navbar {
     width: 100%;
@@ -77,10 +70,6 @@ body {
     align-items: center;
 }
 
-
-/* =========================
-   BOTÓN MENÚ
-   ========================= */
 
 .btn-menu {
     position: absolute;
@@ -126,9 +115,6 @@ body {
 }
 
 
-/* =========================
-   LOGO DEL ENCABEZADO
-   ========================= */
 
 .brand {
     position: absolute;
@@ -160,9 +146,6 @@ body {
 }
 
 
-/* =========================
-   MENÚ LATERAL
-   ========================= */
 
 .menu-lateral {
     position: fixed;
@@ -236,10 +219,6 @@ body {
 }
 
 
-/* =========================
-   IMAGEN PRINCIPAL
-   ========================= */
-
 .contenido-central {
     width: 100%;
     height: 70vh;
@@ -282,9 +261,6 @@ body {
 }
 
 
-/* =========================
-   FICHAS
-   ========================= */
 
 .seccion-casos {
     padding: 50px 20px;
@@ -347,10 +323,6 @@ body {
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
-
 .footer-oscuro {
     background-color: #1a1a1a;
 
@@ -371,9 +343,6 @@ body {
 }
 
 
-/* =========================
-   PÁGINA BÚSQUEDA
-   ========================= */
 
 .contenedor-buscador {
     background-color: #f4f4f4;
@@ -410,10 +379,6 @@ body {
 #input-buscador:focus {
     border-color: var(--color-azul);
 }
-
-/* =========================
-   TEXTO SOBRE IMAGEN INICIO
-   ========================= */
 
 .contenido-hero {
     position: absolute;
@@ -460,9 +425,7 @@ body {
 
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
 }
-/* =========================
-   TIPOGRAFÍA DEL INICIO
-   ========================= */
+
 
 .titulo-hero {
     color: #364152;
@@ -492,10 +455,6 @@ body {
     text-shadow:
         0 2px 5px rgba(0, 0, 0, 0.65);
 }
-
-/* =========================
-   BUSCADOR DEL INICIO
-   ========================= */
 
 .buscador-inicio {
     width: 100%;
@@ -549,9 +508,6 @@ body {
     background-color: #173295;
 }
 
-/* =========================
-   INFORMACIÓN DEL INICIO
-   ========================= */
 
 .beneficios-inicio {
     width: 100%;
@@ -637,10 +593,6 @@ body {
     text-align: center;
 }
 
-/* =========================
-   RESPONSIVE - CELULARES
-   ========================= */
-
 @media (max-width: 768px) {
 
     :root {
@@ -693,7 +645,6 @@ body {
         font-size: 15px;
     }
 
-    /* INFORMACIÓN INFERIOR EN CELULAR */
 
 .beneficios-inicio {
     grid-template-columns: 1fr;
@@ -754,4 +705,25 @@ body {
         line-height: 1.4;
     }
 
+}
+*/
+
+.tarjeta-beneficio {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+.tarjeta-beneficio:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527); 
+    background-color: #ffffff;
+}
+
+.tarjeta-animada {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-animada:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527) !important;
 }
