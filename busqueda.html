@@ -118,6 +118,22 @@
 
         console.log("Tarjetas visibles: " + coincidencias);
     });
+
+    function manejarMensajeSinResultados(coincidencias) {
+        const contenedorRow = document.querySelector('#contenedor-fichas .row');
+        let alertaExistente = document.getElementById('mensaje-sin-resultados');
+        if (coincidencias === 0 && !alertaExistente) {
+            
+            const nuevoMensaje = document.createElement('div'); 
+            nuevoMensaje.id = 'mensaje-sin-resultados';
+            nuevoMensaje.classList.add('col-12', 'alert', 'alert-warning', 'text-center', 'fw-bold', 'mt-4', 'shadow-sm');
+            nuevoMensaje.textContent = 'No se encontraron casos que coincidan con la búsqueda.';
+            contenedorRow.appendChild(nuevoMensaje);
+        } 
+        else if (coincidencias > 0 && alertaExistente) {
+            alertaExistente.remove();
+        }
+    }
 </script>
 </body>
 </html>
