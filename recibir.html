@@ -1,627 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    
-    <meta name="description"
-        content="Suscribite a las alertas de Alerta Búsqueda para recibir información sobre búsquedas prioritarias de personas desaparecidas.">
-
-    <meta name="author"
-        content="Equipo Alerta Búsqueda">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suscribite a las alertas de Alerta Búsqueda para recibir información sobre búsquedas prioritarias de personas desaparecidas.">
+    <meta name="author" content="Equipo Alerta Búsqueda">
     <title>Recibir alertas | Alerta Búsqueda</title>
-
-
-   
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+<body class="bg-light">
 
-
-<body>
-
-   <header class="navbar">
-    <div class="menu-logo-container">
-
-        <button id="btn-menu" class="btn-menu">
-            <span class="icono-menu">☰</span>
-            <span class="texto-menu">Menú</span>
+<nav class="navbar bg-white fixed-top shadow-sm px-3 py-1">
+    <div class="container-fluid">
+        <button class="navbar-toggler border-0 text-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
+            <span class="fs-3">☰ <span class="fs-6 fw-bold ms-1">Menú</span></span>
         </button>
-
-        <div class="brand">
-            <img
-                src="img/logo-encabezado2 (2).png"
-                alt="Logo de Alerta Búsqueda"
-                class="logo-barra">
-        </div>
-
+        <a class="navbar-brand mx-auto py-0" href="index.html">
+            <img src="img/logo-encabezado2 (2).png" alt="Logo de Alerta Búsqueda" style="height: 55px; width: auto; object-fit: contain;">
+        </a>
     </div>
-</header>
-
-<nav id="menu-lateral" class="menu-lateral">
-    <ul>
-
-        <li>
-            <a href="index.html">
-                <i class="bi bi-house-door"></i>
-                Inicio
-            </a>
-        </li>
-
-        <li>
-            <a href="busqueda.html">
-                <i class="bi bi-search"></i>
-                Búsqueda
-            </a>
-        </li>
-
-        <li>
-            <a href="registro.html">
-          <i class="bi bi-file-earmark-text"></i>
-                Registrar búsqueda
-            </a>
-        </li>
-
-        <li>
-            <a href="recibir.html">
-                <i class="bi bi-bell"></i>
-                Recibir Alertas
-            </a>
-        </li>
-
-    </ul>
 </nav>
 
-    <main>
-
-        <section class="container py-5">
-
-
-       
-
-            <div class="text-center mb-5">
-
-<h1 class="fw-bold">
-    RECIBIR ALERTAS DE BÚSQUEDA
-</h1>
-
-                <p
-                    class="text-secondary mx-auto"
-                    style="max-width: 700px;">
-
-                    Registrate para recibir información sobre
-                    búsquedas prioritarias y novedades relevantes
-                    de acuerdo con las opciones que selecciones.
-
-                </p>
-
-            </div>
-
-
-
-
-            <div class="row justify-content-center">
-
-                <div class="col-12 col-lg-8">
-
-                    <div class="card shadow-sm border-0">
-
-                        <div class="card-body p-4 p-md-5">
-
-
-                            <h2 class="h4 mb-4">
-                                Datos de contacto
-                            </h2>
-
-
-                            <form>
-
-
-<div class="row g-3">
-
-    <div class="col-md-4">
-
-        <label for="nombre" class="form-label">
-            Nombre y apellido
-        </label>
-
-        <input
-            type="text"
-            class="form-control"
-            id="nombre"
-            name="nombre"
-            placeholder="Ingresá tu nombre"
-            autocomplete="off"
-            required>
-
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title text-primary fw-bold" id="menuLateralLabel">Alerta Búsqueda</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
-
-
-    <div class="col-md-4">
-
-        <label for="edad" class="form-label">
-            Edad
-        </label>
-
-        <input
-            type="text"
-            class="form-control"
-            id="edad"
-            name="edad"
-            placeholder="Edad"
-            inputmode="numeric"
-            maxlength="3"
-            autocomplete="off"
-            required>
-
+    <div class="offcanvas-body">
+        <ul class="nav flex-column fs-5 gap-3 mt-2">
+            <li class="nav-item"><a class="nav-link text-dark" href="index.html"><i class="bi bi-house-door text-primary me-2"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="busqueda.html"><i class="bi bi-search text-primary me-2"></i> Búsqueda</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="registro.html"><i class="bi bi-file-earmark-text text-primary me-2"></i> Registrar búsqueda</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="recibir.html"><i class="bi bi-bell text-primary me-2"></i> Recibir Alertas</a></li>
+        </ul>
     </div>
-
-
-    <div class="col-md-4">
-
-        <label for="telefono" class="form-label">
-            Número de teléfono
-        </label>
-
-        <input
-            type="tel"
-            class="form-control"
-            id="telefono"
-            name="telefono"
-            placeholder="Ej: 381..."
-            required>
-
-    </div>
-                                 
-
-     <div class="col-12">
-
-        <label for="provincia" class="form-label">
-            Provincia
-        </label>
-
-        <select
-            class="form-select"
-            id="provincia"
-            name="provincia"
-            required>
-
-            <option value="" selected disabled>
-                Seleccioná una provincia
-            </option>
-
-            <option value="buenos-aires">Buenos Aires</option>
-            <option value="caba">Ciudad Autónoma de Buenos Aires</option>
-            <option value="catamarca">Catamarca</option>
-            <option value="chaco">Chaco</option>
-            <option value="chubut">Chubut</option>
-            <option value="cordoba">Córdoba</option>
-            <option value="corrientes">Corrientes</option>
-            <option value="entre-rios">Entre Ríos</option>
-            <option value="formosa">Formosa</option>
-            <option value="jujuy">Jujuy</option>
-            <option value="la-pampa">La Pampa</option>
-            <option value="la-rioja">La Rioja</option>
-            <option value="mendoza">Mendoza</option>
-            <option value="misiones">Misiones</option>
-            <option value="neuquen">Neuquén</option>
-            <option value="rio-negro">Río Negro</option>
-            <option value="salta">Salta</option>
-            <option value="san-juan">San Juan</option>
-            <option value="san-luis">San Luis</option>
-            <option value="santa-cruz">Santa Cruz</option>
-            <option value="santa-fe">Santa Fe</option>
-            <option value="santiago-del-estero">Santiago del Estero</option>
-            <option value="tierra-del-fuego">Tierra del Fuego</option>
-            <option value="tucuman">Tucumán</option>
-
-        </select>
-
-    </div>
-
 </div>
 
+<main style="margin-top: 90px;">
+    <section class="container py-4">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold" style="color: #0a2f6b;">RECIBIR ALERTAS DE BÚSQUEDA</h1>
+            <p class="text-secondary mx-auto" style="max-width: 700px;">
+                Registrate para recibir información sobre búsquedas prioritarias y novedades relevantes de acuerdo con las opciones que selecciones.
+            </p>
+        </div>
 
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="h4 mb-4 fw-bold text-dark">Datos de contacto</h2>
+                        
+                        <form id="formulario-alertas">
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <label for="nombre" class="form-label fw-medium">Nombre y apellido</label>
+                                    <input type="text" class="form-control bg-light border-0" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" autocomplete="off" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="edad" class="form-label fw-medium">Edad</label>
+                                    <input type="text" class="form-control bg-light border-0" id="edad" name="edad" placeholder="Ej: 30" inputmode="numeric" maxlength="3" autocomplete="off" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="telefono" class="form-label fw-medium">Teléfono</label>
+                                    <input type="tel" class="form-control bg-light border-0" id="telefono" name="telefono" placeholder="Ej: 381..." required>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <label for="provincia" class="form-label fw-medium">Provincia</label>
+                                    <select class="form-select bg-light border-0" id="provincia" name="provincia" required>
+                                        <option value="" selected disabled>Seleccioná una provincia</option>
+                                        <option value="buenos-aires">Buenos Aires</option>
+                                        <option value="caba">Ciudad Autónoma de Buenos Aires</option>
+                                        <option value="catamarca">Catamarca</option>
+                                        <option value="chaco">Chaco</option>
+                                        <option value="chubut">Chubut</option>
+                                        <option value="cordoba">Córdoba</option>
+                                        <option value="corrientes">Corrientes</option>
+                                        <option value="entre-rios">Entre Ríos</option>
+                                        <option value="formosa">Formosa</option>
+                                        <option value="jujuy">Jujuy</option>
+                                        <option value="la-pampa">La Pampa</option>
+                                        <option value="la-rioja">La Rioja</option>
+                                        <option value="mendoza">Mendoza</option>
+                                        <option value="misiones">Misiones</option>
+                                        <option value="neuquen">Neuquén</option>
+                                        <option value="rio-negro">Río Negro</option>
+                                        <option value="salta">Salta</option>
+                                        <option value="san-juan">San Juan</option>
+                                        <option value="san-luis">San Luis</option>
+                                        <option value="santa-cruz">Santa Cruz</option>
+                                        <option value="santa-fe">Santa Fe</option>
+                                        <option value="santiago-del-estero">Santiago del Estero</option>
+                                        <option value="tierra-del-fuego">Tierra del Fuego</option>
+                                        <option value="tucuman">Tucumán</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                                <hr class="my-5">
+                            <hr class="my-4 text-muted">
 
+                            <h2 class="h4 mb-3 fw-bold text-dark">¿Qué alertas querés recibir?</h2>
+                            <p class="text-secondary small mb-4">Podés seleccionar una o varias opciones.</p>
 
-
+                            <!-- Checkboxes con la clase extra 'check-alerta' para el JS -->
+                            <div class="form-check mb-3">
+                                <input class="form-check-input check-alerta" type="checkbox" id="alertasPrioritarias" name="tipoAlerta">
+                                <label class="form-check-label fw-medium" for="alertasPrioritarias">Alertas prioritarias</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input check-alerta" type="checkbox" id="menores" name="tipoAlerta">
+                                <label class="form-check-label fw-medium" for="menores">Búsquedas de niños y adolescentes</label>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input check-alerta" type="checkbox" id="adultosMayores" name="tipoAlerta">
+                                <label class="form-check-label fw-medium" for="adultosMayores">Personas mayores</label>
+                            </div>
                             
-
-                                <h2 class="h4 mb-3">
-                                    ¿Qué alertas querés recibir?
-                                </h2>
-
-                                <p class="text-secondary">
-                                    Podés seleccionar una o varias opciones.
-                                </p>
-
-
-
-                                <div class="form-check mb-3">
-
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="alertasPrioritarias"
-                                        name="tipoAlerta">
-
-                                    <label
-                                        class="form-check-label"
-                                        for="alertasPrioritarias">
-
-                                         Alertas prioritarias
-
-                                    </label>
-
-                                </div>
-
-
-
-                                <div class="form-check mb-3">
-
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="menores"
-                                        name="tipoAlerta">
-
-                                    <label
-                                        class="form-check-label"
-                                        for="menores">
-
-                                         Búsquedas de niños y adolescentes
-
-                                    </label>
-
-                                </div>
-
-
-
-                                <div class="form-check mb-3">
-
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="adultosMayores"
-                                        name="tipoAlerta">
-
-                                    <label
-                                        class="form-check-label"
-                                        for="adultosMayores">
-
-                                         Personas mayores
-
-                                             </label>
-</div>
-
-
-<div class="form-check mb-3">
-    <input
-        class="form-check-input"
-        type="checkbox"
-        id="zona"
-        name="tipoAlerta">
-
-    <label
-        class="form-check-label"
-        for="zona">
-
-        Desapariciones en mi zona
-
-                                    </label>
-
-                                </div>
-
-
-
-                                <div class="form-check mb-3">
-
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="todas"
-                                        name="tipoAlerta">
-
-                                    <label
-                                        class="form-check-label"
-                                        for="todas">
-
-                                         Todas las búsquedas
-
-                                    </label>
-
-                                </div>
-
-
-
-
-                                <div
-                                    class="alert alert-info mt-4"
-                                    role="alert">
-
-                                    <strong>Importante:</strong>
-
-                                    Esta función forma parte de un proyecto
-                                    académico. En una aplicación real sería
-                                    necesario contar con consentimiento y
-                                    protección adecuada de los datos personales.
-
-                                </div>
-
-
-
-                          
-
-                                <div class="form-check mt-4">
-
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="consentimiento"
-                                        required>
-
-                                    <label
-                                        class="form-check-label"
-                                        for="consentimiento">
-
-                                        Acepto recibir alertas relacionadas
-                                        con búsquedas de personas.
-
-                                    </label>
-
-                                </div>
-
-
-
-                           
-
-                                <div
-                                    class="d-grid d-md-flex justify-content-md-end mt-4">
-
-                                    <button
-                                        type="submit"
-                                        class="btn btn-primary btn-lg">
-
-                                         Quiero recibir alertas
-
-                                    </button>
-
-                                </div>
-
-
-                            </form>
-
-                        </div>
-
+                            <!-- Opción maestra que controla a las demás -->
+                            <div class="form-check mb-4 bg-light p-3 rounded border">
+                                <input class="form-check-input ms-1" type="checkbox" id="todas" name="tipoAlerta">
+                                <label class="form-check-label fw-bold ms-2 text-primary" for="todas">Todas las búsquedas</label>
+                            </div>
+
+                            <!-- Botón Original Estilizado -->
+                            <div class="mt-5 text-center">
+                                <button type="submit" class="btn text-white fw-bold fs-5 rounded-pill shadow px-5 py-3 w-100" style="background-color: #0a2f6b; border: none; letter-spacing: 1px;">
+                                    QUIERO RECIBIR ALERTAS
+                                </button>
+                            </div>
+                        </form>
                     </div>
-
                 </div>
-
             </div>
+        </div>
+    </section>
 
-
-        </section>
-
-        </section>
-
-
-        <section class="container py-5">
-
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">¿Cómo funcionan las alertas?</h2>
-
-                <p class="text-secondary">
-                    Información sobre el sistema de notificaciones de Alerta Búsqueda.
-                </p>
+    <section class="container py-5 mb-4">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark">¿Cómo funcionan las alertas?</h2>
+            <p class="text-secondary">Información sobre el sistema de notificaciones de Alerta Búsqueda.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="accordion shadow-sm" id="accordionAlertas">
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#alertaUno">
+                                ¿Qué tipo de alertas voy a recibir?
+                            </button>
+                        </h2>
+                        <div id="alertaUno" class="accordion-collapse collapse show" data-bs-parent="#accordionAlertas">
+                            <div class="accordion-body text-secondary">
+                                Podrás elegir recibir alertas prioritarias, búsquedas de menores, personas mayores o todas las búsquedas de tu provincia.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#alertaDos">
+                                ¿Puedo seleccionar mi provincia?
+                            </button>
+                        </h2>
+                        <div id="alertaDos" class="accordion-collapse collapse" data-bs-parent="#accordionAlertas">
+                            <div class="accordion-body text-secondary">
+                                Sí. El formulario permite seleccionar una provincia para organizar las alertas según la ubicación indicada.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#alertaTres">
+                                ¿Cómo se utilizan los datos?
+                            </button>
+                        </h2>
+                        <div id="alertaTres" class="accordion-collapse collapse" data-bs-parent="#accordionAlertas">
+                            <div class="accordion-body text-secondary">
+                                Los datos proporcionados se utilizan de manera confidencial y exclusivamente para el envío de alertas pertinentes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="accordion" id="accordionAlertas">
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-
-                        <button class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#alertaUno">
-
-                            ¿Qué tipo de alertas voy a recibir?
-
-                        </button>
-
-                    </h2>
-
-                    <div id="alertaUno"
-                        class="accordion-collapse collapse show"
-                        data-bs-parent="#accordionAlertas">
-
-                        <div class="accordion-body">
-                            Podrás elegir recibir alertas prioritarias,
-                            búsquedas de menores, personas mayores o todas
-                            las búsquedas.
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="accordion-item">
-
-                    <h2 class="accordion-header">
-
-                        <button class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#alertaDos">
-
-                            ¿Puedo seleccionar mi provincia?
-
-                        </button>
-
-                    </h2>
-
-                    <div id="alertaDos"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionAlertas">
-
-                        <div class="accordion-body">
-                            Sí. El formulario permite seleccionar una
-                            provincia para organizar las alertas según
-                            la ubicación indicada.
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="accordion-item">
-
-                    <h2 class="accordion-header">
-
-                        <button class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#alertaTres">
-
-                            ¿Cómo se utilizan los datos?
-
-                        </button>
-
-                    </h2>
-
-                    <div id="alertaTres"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionAlertas">
-
-                        <div class="accordion-body">
-                            En una implementación real, los datos deberían
-                            utilizarse únicamente para el envío de alertas
-                            y respetando las normas de protección de datos.
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
+        </div>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
-    const btnMenu = document.getElementById('btn-menu');
-    const menuLateral = document.getElementById('menu-lateral');
-    const iconoMenu = document.querySelector('.icono-menu');
-    const textoMenu = document.querySelector('.texto-menu');
+    const nombre = document.getElementById('nombre');
+    const edad = document.getElementById('edad');
+    const telefono = document.getElementById('telefono');
 
-    function cerrarMenu() {
-        menuLateral.classList.remove('abierto');
-
-        iconoMenu.textContent = '☰';
-        textoMenu.textContent = 'Menú';
-
-        iconoMenu.classList.remove('girar');
-    }
-
-    btnMenu.addEventListener('click', () => {
-
-        menuLateral.classList.toggle('abierto');
-
-        if (menuLateral.classList.contains('abierto')) {
-
-            iconoMenu.textContent = '✖';
-            textoMenu.textContent = 'Cerrar';
-
-            iconoMenu.classList.add('girar');
-
-        } else {
-
-            cerrarMenu();
-
-        }
-
+    nombre.addEventListener('input', () => {
+        nombre.value = nombre.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, '');
     });
 
-    document.addEventListener('click', (event) => {
-
-        const clickDentroMenu = menuLateral.contains(event.target);
-        const clickEnBoton = btnMenu.contains(event.target);
-
-        if (
-            menuLateral.classList.contains('abierto') &&
-            !clickDentroMenu &&
-            !clickEnBoton
-        ) {
-            cerrarMenu();
-        }
-
+    edad.addEventListener('input', () => {
+        edad.value = edad.value.replace(/[^0-9]/g, '');
     });
 
-    /* VALIDACIÓN DEL FORMULARIO DE ALERTAS */
+    telefono.addEventListener('input', () => {
+        telefono.value = telefono.value.replace(/[^0-9+\-]/g, '');
+    });
 
-const nombre = document.getElementById('nombre');
-const edad = document.getElementById('edad');
+    const checkTodas = document.getElementById('todas');
+    // Seleccionamos los 3 checkboxes individuales usando la clase que les agregamos
+    const checksIndividuales = document.querySelectorAll('.check-alerta');
 
+    checkTodas.addEventListener('change', (e) => {
+        const estaMarcado = e.target.checked;
+        checksIndividuales.forEach(check => {
+            check.checked = estaMarcado; // Tilda o destilda los demás
+        });
+    });
 
-/* Nombre y apellido: solamente letras y espacios */
-
-nombre.addEventListener('input', () => {
-
-    nombre.value = nombre.value.replace(
-        /[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g,
-        ''
-    );
-
-});
-
-
-/* Edad: solamente números */
-
-edad.addEventListener('input', () => {
-
-    edad.value = edad.value.replace(
-        /[^0-9]/g,
-        ''
-    );
-
-});
-
-const telefono = document.getElementById('telefono');
-
-telefono.addEventListener('input', () => {
-
-    telefono.value = telefono.value.replace(
-        /[^0-9+\-]/g,
-        ''
-    );
-
-});
+    checksIndividuales.forEach(check => {
+        check.addEventListener('change', () => {
+            if (!check.checked) {
+                checkTodas.checked = false;
+            }
+        });
+    });
 </script>
-
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-
 </body>
-
 </html>
