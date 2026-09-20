@@ -1,5 +1,5 @@
 :root {
-    --alto-navbar: 90px;
+    --alto-navbar: 110px;
 
     --color-primario: #f6f7f9;
     --color-secundario: #f9fafb;
@@ -726,4 +726,26 @@ body {
 .tarjeta-animada:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527) !important;
+}
+
+.titulo-inicio {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #0A2F6B;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.85);
+}
+
+.subtitulo-inicio {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A2F6B;
+    line-height: 1.4;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
