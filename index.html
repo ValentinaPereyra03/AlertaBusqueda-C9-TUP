@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alerta Búsqueda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
 <nav class="navbar bg-white fixed-top shadow-sm px-3 py-1">
-    <div class="container-fluid">
+    <div class="container-fluid position-relative">
         <!-- Botón Hamburguesa (con texto un poco más chico) -->
         <button class="navbar-toggler border-0 text-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
-            <span class="fs-3">☰ <span class="fs-6 fw-bold ms-1">Menú</span></span>
+        <span class="fs-3 d-inline-flex align-items-center">
+    ☰
+    <span class="fs-6 fw-bold ms-1 d-none d-sm-inline">Menú</span>
+</span>
         </button>
 
         <!-- Logo centrado (Fijamos el alto para afinar la barra) -->
-        <a class="navbar-brand mx-auto py-0" href="index.html">
-            <img src="img/logo-encabezado2 (2).png" alt="Logo de Alerta Búsqueda" style="height: 55px; width: auto; object-fit: contain;">
+        <a class="navbar-brand position-absolute start-50 translate-middle-x py-0" href="index.html">
+            <img src="img/logo-encabezado2 (2).png" alt="Logo de Alerta Búsqueda" style="height: 85px; width: auto; object-fit: contain;">
         </a>
     </div>
 </nav>
@@ -54,13 +58,14 @@
 
     <div class="container position-relative px-3" style="z-index: 2; max-width: 700px;">
         
-        <h1 class="display-4 fw-bolder text-dark mb-3" style="text-shadow: 0px 0px 8px rgba(255,255,255,0.9);">
-            CADA DATO CUENTA
-        </h1>
+<h1 class="titulo-inicio mb-3">
+    TU INFORMACIÓN<br>
+    PUEDE AYUDAR
+</h1>
 
-        <p class="fs-5 text-dark fw-bold mb-4" style="text-shadow: 0px 0px 8px rgba(255,255,255,0.9);">
-            Compartir información responsable puede ayudar a encontrar a una persona.
-        </p>
+<p class="subtitulo-inicio mb-4">
+    Compartir información responsable puede ayudar a encontrar una persona.
+</p>
 
         <form class="input-group shadow rounded-pill overflow-hidden mx-auto" action="busqueda.html" method="get" style="max-width: 600px;">
             <input type="text" name="q" class="form-control border-0 px-4 fs-6 py-3" placeholder="Buscar por nombre, apellido o zona..." aria-label="Buscar" style="box-shadow: none;">
