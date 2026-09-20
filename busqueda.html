@@ -84,11 +84,11 @@
                 <a href="pagina-caso1.html" class="text-decoration-none">
                     <div class="card h-100 border-0 shadow-sm tarjeta-animada">
                         <!-- Atributo alt mejorado para el SEO -->
-                        <img src="img/foto-ejemplo1.jpg" class="card-img-top bg-secondary"
+                        <img src="img/personadesaparecida2.jpg" class="card-img-top bg-secondary"
                             alt="Fotografía de Juan Pérez, visto en Tucumán" style="height: 250px; object-fit: cover;">
                         <div class="card-body text-center">
                             <p class="card-text fw-bold text-dark texto-ficha small">Juan Pérez - Visto por última vez
-                                en Tucumán...</p>
+                                en Tucumán - Edad 28</p>
                         </div>
                     </div>
                 </a>
@@ -98,11 +98,11 @@
             <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
                 <a href="pagina-caso2.html" class="text-decoration-none">
                     <div class="card h-100 border-0 shadow-sm tarjeta-animada">
-                        <img src="img/foto-ejemplo2.jpg" class="card-img-top bg-secondary"
+                        <img src="img/personadesaparecida1.jpg" class="card-img-top bg-secondary"
                             alt="Fotografía de María Gómez, falta en Córdoba" style="height: 250px; object-fit: cover;">
                         <div class="card-body text-center">
                             <p class="card-text fw-bold text-dark texto-ficha small">María Gómez - Falta desde el 12/05
-                                en Córdoba...</p>
+                                en Córdoba - Edad 70</p>
                         </div>
                     </div>
                 </a>
@@ -112,12 +112,12 @@
             <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
                 <a href="pagina-caso3.html" class="text-decoration-none">
                     <div class="card h-100 border-0 shadow-sm tarjeta-animada">
-                        <img src="img/foto-ejemplo3.jpg" class="card-img-top bg-secondary"
+                        <img src="img/personadesaparecida3.jpeg" class="card-img-top bg-secondary"
                             alt="Fotografía de Carlos López, desaparecido en Buenos Aires"
                             style="height: 250px; object-fit: cover;">
                         <div class="card-body text-center">
                             <p class="card-text fw-bold text-dark texto-ficha small">Carlos López - Desaparecido en
-                                Buenos Aires...</p>
+                                Buenos Aires - Edad 60</p>
                         </div>
                     </div>
                 </a>
@@ -158,6 +158,18 @@
                 'shadow-sm',
                 'tarjeta-animada'
             );
+
+            if (solicitud.foto) {
+                const imagen = document.createElement('img');
+
+                imagen.src = solicitud.foto;
+                imagen.classList.add('card-img-top');
+                imagen.alt = `Fotografía de ${solicitud.nombre} ${solicitud.apellido}`;
+                imagen.style.height = '250px';
+                imagen.style.objectFit = 'cover';
+
+                tarjeta.appendChild(imagen);
+            }
 
             const cuerpoTarjeta = document.createElement('div');
             cuerpoTarjeta.classList.add('card-body', 'text-center');
