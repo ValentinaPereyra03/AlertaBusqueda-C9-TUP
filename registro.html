@@ -214,6 +214,7 @@
         const lugar = document.getElementById('lugar');
         const descripcion = document.getElementById('descripcion');
         const infoExtra = document.getElementById('infoExtra');
+        const foto = document.getElementById('foto');
 
         edadPersona.addEventListener('input', () => {
             edadPersona.value = edadPersona.value.replace(/[^0-9]/g, '');
@@ -237,8 +238,32 @@
             telefonoContacto.value = telefonoContacto.value.replace(/[^0-9+\-]/g, '');
         });
 
-        formularioRegistro.addEventListener('submit', (e) => {
+        function convertirFotoBase64(archivo) {
+            return new Promise((resolve, reject) => {
+                if (!archivo) {
+                    resolve('');
+                    return;
+                }
+
+                const lector = new FileReader();
+
+                lector.onload = () => {
+                    resolve(lector.result);
+                };
+
+                lector.onerror = () => {
+                    reject(lector.error);
+                };
+
+                lector.readAsDataURL(archivo);
+            });
+        }
+
+        formularioRegistro.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const archivoFoto = foto.files[0];
+            const fotoBase64 = await convertirFotoBase64(archivoFoto);
 
             const nuevaSolicitud = {
                 nombre: nombrePersona.value.trim(),
@@ -249,6 +274,7 @@
                 lugar: lugar.value.trim(),
                 descripcion: descripcion.value.trim(),
                 infoExtra: infoExtra.value.trim(),
+                foto: fotoBase64,
                 estado: 'Pendiente de verificación'
             };
 
