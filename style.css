@@ -714,8 +714,8 @@ body {
 }
 
 .tarjeta-beneficio:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527); 
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527);
     background-color: #ffffff;
 }
 
