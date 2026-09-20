@@ -81,7 +81,7 @@
 
             <!-- FICHA 1 -->
             <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
-                <a href="pagina-caso1.html" class="text-decoration-none">
+                <a href="#" class="text-decoration-none caso-fijo" data-caso="0">
                     <div class="card h-100 border-0 shadow-sm tarjeta-animada">
                         <!-- Atributo alt mejorado para el SEO -->
                         <img src="img/personadesaparecida2.jpg" class="card-img-top bg-secondary"
@@ -96,13 +96,15 @@
 
             <!-- FICHA 2 -->
             <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
-                <a href="pagina-caso2.html" class="text-decoration-none">
+                <a href="#" class="text-decoration-none caso-fijo" data-caso="1">
                     <div class="card h-100 border-0 shadow-sm tarjeta-animada">
                         <img src="img/personadesaparecida1.jpg" class="card-img-top bg-secondary"
                             alt="Fotografía de María Gómez, falta en Córdoba" style="height: 250px; object-fit: cover;">
+
                         <div class="card-body text-center">
-                            <p class="card-text fw-bold text-dark texto-ficha small">María Gómez - Falta desde el 12/05
-                                en Córdoba - Edad 70</p>
+                            <p class="card-text fw-bold text-dark texto-ficha small">
+                                María Gómez - Falta desde el 12/05 en Córdoba - Edad 70
+                            </p>
                         </div>
                     </div>
                 </a>
@@ -110,7 +112,7 @@
 
             <!-- FICHA 3 -->
             <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
-                <a href="pagina-caso3.html" class="text-decoration-none">
+                <a href="#" class="text-decoration-none caso-fijo" data-caso="2">
                     <div class="card h-100 border-0 shadow-sm tarjeta-animada">
                         <img src="img/personadesaparecida3.jpeg" class="card-img-top bg-secondary"
                             alt="Fotografía de Carlos López, desaparecido en Buenos Aires"
@@ -126,11 +128,169 @@
         </div>
     </main>
 
+    <!-- MODAL DETALLE DE LA PERSONA -->
+    <div class="modal fade" id="modalDetallePersona" tabindex="-1" aria-labelledby="tituloModalPersona"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow">
+
+                <div class="modal-header">
+                    <h2 class="modal-title h5 fw-bold text-primary" id="tituloModalPersona">
+                        Detalle de la búsqueda
+                    </h2>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-4">
+
+                        <div class="col-md-5 text-center">
+                            <img id="modalFoto" src="" alt="Fotografía de la persona buscada"
+                                class="img-fluid rounded shadow-sm" style="max-height: 350px; object-fit: cover;">
+                        </div>
+
+                        <div class="col-md-7">
+
+                            <h3 id="modalNombre" class="h4 fw-bold mb-3">
+                            </h3>
+
+                            <p>
+                                <strong>Edad:</strong>
+                                <span id="modalEdad"></span>
+                            </p>
+
+                            <p>
+                                <strong>Provincia:</strong>
+                                <span id="modalProvincia"></span>
+                            </p>
+
+                            <p>
+                                <strong>Fecha de desaparición:</strong>
+                                <span id="modalFecha"></span>
+                            </p>
+
+                            <p>
+                                <strong>Último lugar donde fue vista:</strong>
+                                <span id="modalLugar"></span>
+                            </p>
+
+                            <p>
+                                <strong>Descripción:</strong>
+                                <span id="modalDescripcion"></span>
+                            </p>
+
+                            <p>
+                                <strong>Información adicional:</strong>
+                                <span id="modalInfoExtra"></span>
+                            </p>
+
+                            <p>
+                                <strong>Estado:</strong>
+                                <span id="modalEstado"></span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
     <script>
+
+        function mostrarDetallePersona(persona) {
+            document.getElementById('modalNombre').textContent =
+                `${persona.nombre} ${persona.apellido}`;
+
+            document.getElementById('modalEdad').textContent =
+                persona.edad || 'No especificada';
+
+            document.getElementById('modalProvincia').textContent =
+                persona.provincia || 'No especificada';
+
+            document.getElementById('modalFecha').textContent =
+                persona.fechaDesaparicion || 'No especificada';
+
+            document.getElementById('modalLugar').textContent =
+                persona.lugar || 'No especificado';
+
+            document.getElementById('modalDescripcion').textContent =
+                persona.descripcion || 'Sin descripción';
+
+            document.getElementById('modalInfoExtra').textContent =
+                persona.infoExtra || 'Sin información adicional';
+
+            document.getElementById('modalEstado').textContent =
+                persona.estado || 'Búsqueda activa';
+
+            document.getElementById('modalFoto').src =
+                persona.foto || '';
+
+            const modal = new bootstrap.Modal(
+                document.getElementById('modalDetallePersona')
+            );
+
+            modal.show();
+        }
+
+        const casosFijos = [
+            {
+                nombre: 'Juan',
+                apellido: 'Pérez',
+                edad: '28',
+                provincia: 'Tucumán',
+                fechaDesaparicion: 'No especificada',
+                lugar: 'Tucumán',
+                descripcion: 'Cabello de color castaño',
+                infoExtra: 'Vestido de ropa deportiva',
+                estado: 'Búsqueda activa',
+                foto: 'img/personadesaparecida2.jpg'
+            },
+            {
+                nombre: 'María',
+                apellido: 'Gómez',
+                edad: '70',
+                provincia: 'Córdoba',
+                fechaDesaparicion: '12/05',
+                lugar: 'Córdoba',
+                descripcion: 'Cabello de color blanco.',
+                infoExtra: 'Vestida de camison con flores rosas, presenta demencia..',
+                estado: 'Búsqueda activa',
+                foto: 'img/personadesaparecida1.jpg'
+            },
+            {
+                nombre: 'Carlos',
+                apellido: 'López',
+                edad: '60',
+                provincia: 'Buenos Aires',
+                fechaDesaparicion: 'No especificada',
+                lugar: 'Buenos Aires',
+                descripcion: 'Cabello de color blanco',
+                infoExtra: 'Vestido de camisa blanca y pantalon negro, presenta demencia.',
+                estado: 'Búsqueda activa',
+                foto: 'img/personadesaparecida3.jpeg'
+            }
+        ];
+
+        const tarjetasFijas = document.querySelectorAll('.caso-fijo');
+
+        tarjetasFijas.forEach(tarjeta => {
+            tarjeta.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const indiceCaso = tarjeta.dataset.caso;
+                mostrarDetallePersona(casosFijos[indiceCaso]);
+            });
+        });
+
         function quitarAcentos(texto) {
             return texto
                 .normalize("NFD")
@@ -188,10 +348,19 @@
 
             cuerpoTarjeta.appendChild(textoFicha);
             tarjeta.appendChild(cuerpoTarjeta);
+            tarjeta.addEventListener('click', () => {
+                mostrarDetallePersona(solicitud);
+            });
             nuevaFicha.appendChild(tarjeta);
             contenedorFichas.appendChild(nuevaFicha);
         });
-        const inputBuscador = document.getElementById('input-buscador');
+                const inputBuscador = document.getElementById('input-buscador');
+                const parametros = new URLSearchParams(window.location.search);
+                const busquedaInicio = parametros.get('q');
+
+                if (busquedaInicio) {
+                    inputBuscador.value = busquedaInicio;
+                }
         const fichas = document.querySelectorAll('.col-ficha');
 
         inputBuscador.addEventListener('keyup', (e) => {
@@ -212,6 +381,10 @@
 
             manejarMensajeSinResultados(coincidencias);
         });
+
+    if (busquedaInicio) {
+        inputBuscador.dispatchEvent(new Event('keyup'));
+    }
 
         function manejarMensajeSinResultados(coincidencias) {
             const contenedorRow = document.querySelector('#contenedor-fichas .row');
