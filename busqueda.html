@@ -101,9 +101,51 @@
             .normalize("NFD") 
             .replace(/[\u0300-\u036f]/g, ""); 
     }
+        const solicitudesGuardadas =
+            JSON.parse(localStorage.getItem('solicitudesBusqueda')) || [];
 
-    const inputBuscador = document.getElementById('input-buscador');
-    const fichas = document.querySelectorAll('.col-ficha');
+        console.log(solicitudesGuardadas);
+        const contenedorFichas = document.querySelector('#contenedor-fichas .row');
+        solicitudesGuardadas.forEach(solicitud => {
+    const nuevaFicha = document.createElement('div');
+    nuevaFicha.classList.add(
+        'col-sm-6',
+        'col-md-4',
+        'col-lg-3',
+        'col-ficha'
+    );
+
+    const tarjeta = document.createElement('div');
+    tarjeta.classList.add(
+        'card',
+        'h-100',
+        'border-0',
+        'shadow-sm',
+        'tarjeta-animada'
+    );
+
+    const cuerpoTarjeta = document.createElement('div');
+    cuerpoTarjeta.classList.add('card-body', 'text-center');
+
+    const textoFicha = document.createElement('p');
+    textoFicha.classList.add(
+        'card-text',
+        'fw-bold',
+        'text-dark',
+        'texto-ficha',
+        'small'
+    );
+
+    textoFicha.textContent =
+        `${solicitud.nombre} ${solicitud.apellido} - ${solicitud.estado}`;
+
+    cuerpoTarjeta.appendChild(textoFicha);
+    tarjeta.appendChild(cuerpoTarjeta);
+    nuevaFicha.appendChild(tarjeta);
+    contenedorFichas.appendChild(nuevaFicha);
+});
+        const inputBuscador = document.getElementById('input-buscador');
+        const fichas = document.querySelectorAll('.col-ficha');
 
     inputBuscador.addEventListener('keyup', (e) => {
         const textoBusqueda = quitarAcentos(e.target.value.toLowerCase());
