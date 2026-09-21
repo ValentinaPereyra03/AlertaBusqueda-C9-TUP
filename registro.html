@@ -1,297 +1,451 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Registro de solicitudes de búsqueda de personas en la plataforma Alerta Búsqueda.">
-    <meta name="author" content="Equipo Alerta Búsqueda">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Registro de solicitudes de búsqueda de personas en la plataforma Alerta Búsqueda."
+    />
+    <meta name="author" content="Equipo Alerta Búsqueda" />
     <title>Registrar búsqueda | Alerta Búsqueda</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-<body class="bg-light">
-
+  <body class="bg-light">
     <nav class="navbar bg-white fixed-top shadow-sm px-3 py-1">
-        <div class="container-fluid position-relative">
+      <div class="container-fluid position-relative">
+        <button
+          class="navbar-toggler border-0 text-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menuLateral"
+          aria-controls="menuLateral"
+        >
+          <span class="fs-3 d-inline-flex align-items-center">
+            ☰
+            <span class="fs-6 fw-bold ms-1 d-none d-sm-inline">Menú</span>
+          </span>
+        </button>
 
-            <button class="navbar-toggler border-0 text-primary" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#menuLateral" aria-controls="menuLateral">
-                <span class="fs-3 d-inline-flex align-items-center">
-                    ☰
-                    <span class="fs-6 fw-bold ms-1 d-none d-sm-inline">Menú</span>
-                </span>
-            </button>
-
-            <!-- Logo centrado (Fijamos el alto para afinar la barra) -->
-            <a class="navbar-brand position-absolute start-50 translate-middle-x py-0" href="index.html">
-                <img src="img/logo-encabezado2 (2).png" alt="Logo de Alerta Búsqueda"
-                    style="height: 85px; width: auto; object-fit: contain;">
-            </a>
-        </div>
+        <!-- Logo centrado (Fijamos el alto para afinar la barra) -->
+        <a
+          class="navbar-brand position-absolute start-50 translate-middle-x py-0"
+          href="index.html"
+        >
+          <img
+            src="img/logo-encabezado2 (2).png"
+            alt="Logo de Alerta Búsqueda"
+            style="height: 85px; width: auto; object-fit: contain"
+          />
+        </a>
+      </div>
     </nav>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
-        <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title text-primary fw-bold" id="menuLateralLabel">Alerta Búsqueda</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="nav flex-column fs-5 gap-3 mt-2">
-                <li class="nav-item"><a class="nav-link text-dark" href="index.html"><i
-                            class="bi bi-house-door text-primary me-2"></i> Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="busqueda.html"><i
-                            class="bi bi-search text-primary me-2"></i> Búsqueda</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="registro.html"><i
-                            class="bi bi-file-earmark-text text-primary me-2"></i> Registrar búsqueda</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="recibir.html"><i
-                            class="bi bi-bell text-primary me-2"></i> Recibir Alertas</a></li>
-            </ul>
-        </div>
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="menuLateral"
+      aria-labelledby="menuLateralLabel"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title text-primary fw-bold" id="menuLateralLabel">
+          Alerta Búsqueda
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column fs-5 gap-3 mt-2">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html"
+              ><i class="bi bi-house-door text-primary me-2"></i> Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="busqueda.html"
+              ><i class="bi bi-search text-primary me-2"></i> Búsqueda</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="registro.html"
+              ><i class="bi bi-file-earmark-text text-primary me-2"></i>
+              Registrar búsqueda</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="recibir.html"
+              ><i class="bi bi-bell text-primary me-2"></i> Recibir Alertas</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <main style="margin-top: 90px;">
-        <section class="container py-4">
-            <div class="text-center mb-5">
-                <h1 class="fw-bold" style="color: #0a2f6b;">REGISTRAR BÚSQUEDA</h1>
-                <p class="text-secondary mx-auto" style="max-width: 700px;">
-                    Completá la información necesaria para iniciar una solicitud de registro de una persona
-                    desaparecida. La información deberá ser verificada antes de su publicación.
-                </p>
-            </div>
+    <main style="margin-top: 90px">
+      <section class="container py-4">
+        <div class="text-center mb-5">
+          <h1 class="fw-bold" style="color: #0a2f6b">REGISTRAR BÚSQUEDA</h1>
+          <p class="text-secondary mx-auto" style="max-width: 700px">
+            Completá la información necesaria para iniciar una solicitud de
+            registro de una persona desaparecida. La información deberá ser
+            verificada antes de su publicación.
+          </p>
+        </div>
 
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-9">
-                    <div class="card shadow-sm border-0 rounded-3 mb-5">
-                        <div class="card-body p-4 p-md-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-9">
+            <div class="card shadow-sm border-0 rounded-3 mb-5">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="h4 mb-4 fw-bold text-dark">
+                  Datos de la persona buscada
+                </h2>
 
-                            <h2 class="h4 mb-4 fw-bold text-dark">Datos de la persona buscada</h2>
-
-                            <form id="formulario-registro">
-                                <div class="row g-3 mb-4">
-                                    <div class="col-md-6">
-                                        <label for="nombrePersona" class="form-label fw-medium">Nombre</label>
-                                        <input type="text" class="form-control bg-light border-0" id="nombrePersona"
-                                            placeholder="Ingresá el nombre" autocomplete="off" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="apellidoPersona" class="form-label fw-medium">Apellido</label>
-                                        <input type="text" class="form-control bg-light border-0" id="apellidoPersona"
-                                            placeholder="Ingresá el apellido" autocomplete="off" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="edadPersona" class="form-label fw-medium">Edad</label>
-                                        <input type="text" class="form-control bg-light border-0" id="edadPersona"
-                                            placeholder="Ej: 25" inputmode="numeric" maxlength="3" autocomplete="off">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="provincia" class="form-label fw-medium">Provincia</label>
-                                        <select class="form-select bg-light border-0" id="provincia" required>
-                                            <option value="" selected disabled>Seleccioná una provincia</option>
-                                            <option value="buenos-aires">Buenos Aires</option>
-                                            <option value="caba">Ciudad Autónoma de Buenos Aires</option>
-                                            <option value="catamarca">Catamarca</option>
-                                            <option value="chaco">Chaco</option>
-                                            <option value="chubut">Chubut</option>
-                                            <option value="cordoba">Córdoba</option>
-                                            <option value="corrientes">Corrientes</option>
-                                            <option value="entre-rios">Entre Ríos</option>
-                                            <option value="formosa">Formosa</option>
-                                            <option value="jujuy">Jujuy</option>
-                                            <option value="la-pampa">La Pampa</option>
-                                            <option value="la-rioja">La Rioja</option>
-                                            <option value="mendoza">Mendoza</option>
-                                            <option value="misiones">Misiones</option>
-                                            <option value="neuquen">Neuquén</option>
-                                            <option value="rio-negro">Río Negro</option>
-                                            <option value="salta">Salta</option>
-                                            <option value="san-juan">San Juan</option>
-                                            <option value="san-luis">San Luis</option>
-                                            <option value="santa-cruz">Santa Cruz</option>
-                                            <option value="santa-fe">Santa Fe</option>
-                                            <option value="santiago-del-estero">Santiago del Estero</option>
-                                            <option value="tierra-del-fuego">Tierra del Fuego</option>
-                                            <option value="tucuman">Tucumán</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="fechaDesaparicion" class="form-label fw-medium">Fecha de
-                                            desaparición</label>
-                                        <input type="date" class="form-control bg-light border-0" id="fechaDesaparicion"
-                                            required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="lugar" class="form-label fw-medium">Lugar donde fue vista por última
-                                            vez</label>
-                                        <input type="text" class="form-control bg-light border-0" id="lugar"
-                                            placeholder="Localidad, barrio, dirección aproximada..." required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="descripcion" class="form-label fw-medium">Descripción física
-                                            (Contextura, color de pelo, ojos, etc.)</label>
-                                        <textarea class="form-control bg-light border-0" id="descripcion" rows="3"
-                                            placeholder="Agregá información útil para la búsqueda..."
-                                            required></textarea>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label for="infoExtra" class="form-label fw-medium text-primary">Información
-                                            adicional (Opcional)</label>
-                                        <textarea class="form-control bg-light border-0" id="infoExtra" rows="2"
-                                            placeholder="Ej: Vestimenta al momento de la desaparición, tatuajes, cicatrices, o condiciones médicas relevantes..."></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="foto" class="form-label fw-medium">Fotografía reciente</label>
-                                        <input class="form-control bg-light border-0" type="file" id="foto"
-                                            accept="image/*">
-                                    </div>
-                                </div>
-
-                                <hr class="my-5 text-muted">
-
-                                <h2 class="h4 mb-4 fw-bold text-dark">Datos de contacto del denunciante</h2>
-                                <div class="row g-3 mb-4">
-                                    <div class="col-md-4">
-                                        <label for="nombreContacto" class="form-label fw-medium">Nombre y
-                                            apellido</label>
-                                        <input type="text" class="form-control bg-light border-0" id="nombreContacto"
-                                            placeholder="Ingresá nombre completo" autocomplete="off" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="dniContacto" class="form-label fw-medium">DNI</label>
-                                        <input type="text" class="form-control bg-light border-0" id="dniContacto"
-                                            placeholder="Ej: 40123456" inputmode="numeric" maxlength="8"
-                                            autocomplete="off" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="telefonoContacto" class="form-label fw-medium">Teléfono</label>
-                                        <input type="tel" class="form-control bg-light border-0" id="telefonoContacto"
-                                            placeholder="Ej: +54381..." autocomplete="off" required>
-                                    </div>
-                                </div>
-
-                                <div class="alert alert-warning border-0 shadow-sm mt-4 text-center rounded-3"
-                                    role="alert">
-                                    <strong>Importante:</strong> La información subida será verificada para antes de
-                                    poder ser publicada en la pagina.
-                                </div>
-
-                                <div class="mt-5 text-center">
-                                    <button type="submit"
-                                        class="btn text-white fw-bold fs-5 rounded-pill shadow px-5 py-3 w-40 d-block mx-auto"
-                                        style="background-color: #0a2f6b; border: none; letter-spacing: 1px;">
-                                        ENVIAR SOLICITUD DE BÚSQUEDA
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                <form id="formulario-registro">
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                      <label for="nombrePersona" class="form-label fw-medium"
+                        >Nombre</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="nombrePersona"
+                        placeholder="Ingresá el nombre"
+                        autocomplete="off"
+                        required
+                      />
                     </div>
-                </div>
+                    <div class="col-md-6">
+                      <label for="apellidoPersona" class="form-label fw-medium"
+                        >Apellido</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="apellidoPersona"
+                        placeholder="Ingresá el apellido"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="edadPersona" class="form-label fw-medium"
+                        >Edad</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="edadPersona"
+                        placeholder="Ej: 25"
+                        inputmode="numeric"
+                        maxlength="3"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="provincia" class="form-label fw-medium"
+                        >Provincia</label
+                      >
+                      <select
+                        class="form-select bg-light border-0"
+                        id="provincia"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Seleccioná una provincia
+                        </option>
+                        <option value="buenos-aires">Buenos Aires</option>
+                        <option value="caba">
+                          Ciudad Autónoma de Buenos Aires
+                        </option>
+                        <option value="catamarca">Catamarca</option>
+                        <option value="chaco">Chaco</option>
+                        <option value="chubut">Chubut</option>
+                        <option value="cordoba">Córdoba</option>
+                        <option value="corrientes">Corrientes</option>
+                        <option value="entre-rios">Entre Ríos</option>
+                        <option value="formosa">Formosa</option>
+                        <option value="jujuy">Jujuy</option>
+                        <option value="la-pampa">La Pampa</option>
+                        <option value="la-rioja">La Rioja</option>
+                        <option value="mendoza">Mendoza</option>
+                        <option value="misiones">Misiones</option>
+                        <option value="neuquen">Neuquén</option>
+                        <option value="rio-negro">Río Negro</option>
+                        <option value="salta">Salta</option>
+                        <option value="san-juan">San Juan</option>
+                        <option value="san-luis">San Luis</option>
+                        <option value="santa-cruz">Santa Cruz</option>
+                        <option value="santa-fe">Santa Fe</option>
+                        <option value="santiago-del-estero">
+                          Santiago del Estero
+                        </option>
+                        <option value="tierra-del-fuego">
+                          Tierra del Fuego
+                        </option>
+                        <option value="tucuman">Tucumán</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label
+                        for="fechaDesaparicion"
+                        class="form-label fw-medium"
+                        >Fecha de desaparición</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control bg-light border-0"
+                        id="fechaDesaparicion"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="lugar" class="form-label fw-medium"
+                        >Lugar donde fue vista por última vez</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="lugar"
+                        placeholder="Localidad, barrio, dirección aproximada..."
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="descripcion" class="form-label fw-medium"
+                        >Descripción física (Contextura, color de pelo, ojos,
+                        etc.)</label
+                      >
+                      <textarea
+                        class="form-control bg-light border-0"
+                        id="descripcion"
+                        rows="3"
+                        placeholder="Agregá información útil para la búsqueda..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="col-12">
+                      <label
+                        for="infoExtra"
+                        class="form-label fw-medium text-primary"
+                        >Información adicional (Opcional)</label
+                      >
+                      <textarea
+                        class="form-control bg-light border-0"
+                        id="infoExtra"
+                        rows="2"
+                        placeholder="Ej: Vestimenta al momento de la desaparición, tatuajes, cicatrices, o condiciones médicas relevantes..."
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <label for="foto" class="form-label fw-medium"
+                        >Fotografía reciente</label
+                      >
+                      <input
+                        class="form-control bg-light border-0"
+                        type="file"
+                        id="foto"
+                        accept="image/*"
+                      />
+                    </div>
+                  </div>
+
+                  <hr class="my-5 text-muted" />
+
+                  <h2 class="h4 mb-4 fw-bold text-dark">
+                    Datos de contacto del denunciante
+                  </h2>
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                      <label for="nombreContacto" class="form-label fw-medium"
+                        >Nombre y apellido</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="nombreContacto"
+                        placeholder="Ingresá nombre completo"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="dniContacto" class="form-label fw-medium"
+                        >DNI</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="dniContacto"
+                        placeholder="Ej: 40123456"
+                        inputmode="numeric"
+                        maxlength="8"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="telefonoContacto" class="form-label fw-medium"
+                        >Teléfono</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control bg-light border-0"
+                        id="telefonoContacto"
+                        placeholder="Ej: +54381..."
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="alert alert-warning border-0 shadow-sm mt-4 text-center rounded-3"
+                    role="alert"
+                  >
+                    <strong>Importante:</strong> La información subida será
+                    verificada para antes de poder ser publicada en la pagina.
+                  </div>
+
+                  <div class="mt-5 text-center">
+                    <button
+                      type="submit"
+                      class="btn text-white fw-bold fs-5 rounded-pill shadow px-5 py-3 w-40 d-block mx-auto"
+                      style="
+                        background-color: #0a2f6b;
+                        border: none;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      ENVIAR SOLICITUD DE BÚSQUEDA
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-        const formularioRegistro = document.getElementById('formulario-registro');
-        const botonEnviar = formularioRegistro.querySelector('button[type="submit"]');
-        const nombrePersona = document.getElementById('nombrePersona');
-        const apellidoPersona = document.getElementById('apellidoPersona');
-        const nombreContacto = document.getElementById('nombreContacto');
-        const dniContacto = document.getElementById('dniContacto');
-        const telefonoContacto = document.getElementById('telefonoContacto');
-        const edadPersona = document.getElementById('edadPersona');
-        const provincia = document.getElementById('provincia');
-        const fechaDesaparicion = document.getElementById('fechaDesaparicion');
-        const lugar = document.getElementById('lugar');
-        const descripcion = document.getElementById('descripcion');
-        const infoExtra = document.getElementById('infoExtra');
-        const foto = document.getElementById('foto');
+      const formularioRegistro = document.getElementById("formulario-registro");
+      const botonEnviar = formularioRegistro.querySelector(
+        'button[type="submit"]',
+      );
+      const nombrePersona = document.getElementById("nombrePersona");
+      const apellidoPersona = document.getElementById("apellidoPersona");
+      const nombreContacto = document.getElementById("nombreContacto");
+      const dniContacto = document.getElementById("dniContacto");
+      const telefonoContacto = document.getElementById("telefonoContacto");
+      const edadPersona = document.getElementById("edadPersona");
+      const provincia = document.getElementById("provincia");
+      const fechaDesaparicion = document.getElementById("fechaDesaparicion");
+      const lugar = document.getElementById("lugar");
+      const descripcion = document.getElementById("descripcion");
+      const infoExtra = document.getElementById("infoExtra");
+      const foto = document.getElementById("foto");
 
-        edadPersona.addEventListener('input', () => {
-            edadPersona.value = edadPersona.value.replace(/[^0-9]/g, '');
+      edadPersona.addEventListener("input", () => {
+        edadPersona.value = edadPersona.value.replace(/[^0-9]/g, "");
+      });
+
+      function permitirSoloLetras(campo) {
+        campo.addEventListener("input", () => {
+          campo.value = campo.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, "");
         });
+      }
 
-        function permitirSoloLetras(campo) {
-            campo.addEventListener('input', () => {
-                campo.value = campo.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, '');
-            });
-        }
+      permitirSoloLetras(nombrePersona);
+      permitirSoloLetras(apellidoPersona);
+      permitirSoloLetras(nombreContacto);
 
-        permitirSoloLetras(nombrePersona);
-        permitirSoloLetras(apellidoPersona);
-        permitirSoloLetras(nombreContacto);
+      dniContacto.addEventListener("input", () => {
+        dniContacto.value = dniContacto.value.replace(/[^0-9]/g, "");
+      });
 
-        dniContacto.addEventListener('input', () => {
-            dniContacto.value = dniContacto.value.replace(/[^0-9]/g, '');
+      telefonoContacto.addEventListener("input", () => {
+        telefonoContacto.value = telefonoContacto.value.replace(
+          /[^0-9+\-]/g,
+          "",
+        );
+      });
+
+      function convertirFotoBase64(archivo) {
+        return new Promise((resolve, reject) => {
+          if (!archivo) {
+            resolve("");
+            return;
+          }
+
+          const lector = new FileReader();
+
+          lector.onload = () => {
+            resolve(lector.result);
+          };
+
+          lector.onerror = () => {
+            reject(lector.error);
+          };
+
+          lector.readAsDataURL(archivo);
         });
+      }
 
-        telefonoContacto.addEventListener('input', () => {
-            telefonoContacto.value = telefonoContacto.value.replace(/[^0-9+\-]/g, '');
-        });
+      formularioRegistro.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-        function convertirFotoBase64(archivo) {
-            return new Promise((resolve, reject) => {
-                if (!archivo) {
-                    resolve('');
-                    return;
-                }
+        const archivoFoto = foto.files[0];
+        const fotoBase64 = await convertirFotoBase64(archivoFoto);
 
-                const lector = new FileReader();
+        const nuevaSolicitud = {
+          nombre: nombrePersona.value.trim(),
+          apellido: apellidoPersona.value.trim(),
+          edad: edadPersona.value,
+          provincia: provincia.options[provincia.selectedIndex].text,
+          fechaDesaparicion: fechaDesaparicion.value,
+          lugar: lugar.value.trim(),
+          descripcion: descripcion.value.trim(),
+          infoExtra: infoExtra.value.trim(),
+          foto: fotoBase64,
+          estado: "Pendiente de verificación",
+        };
 
-                lector.onload = () => {
-                    resolve(lector.result);
-                };
+        const solicitudesGuardadas =
+          JSON.parse(localStorage.getItem("solicitudesBusqueda")) || [];
 
-                lector.onerror = () => {
-                    reject(lector.error);
-                };
+        solicitudesGuardadas.push(nuevaSolicitud);
 
-                lector.readAsDataURL(archivo);
-            });
-        }
+        localStorage.setItem(
+          "solicitudesBusqueda",
+          JSON.stringify(solicitudesGuardadas),
+        );
 
-        formularioRegistro.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const archivoFoto = foto.files[0];
-            const fotoBase64 = await convertirFotoBase64(archivoFoto);
-
-            const nuevaSolicitud = {
-                nombre: nombrePersona.value.trim(),
-                apellido: apellidoPersona.value.trim(),
-                edad: edadPersona.value,
-                provincia: provincia.options[provincia.selectedIndex].text,
-                fechaDesaparicion: fechaDesaparicion.value,
-                lugar: lugar.value.trim(),
-                descripcion: descripcion.value.trim(),
-                infoExtra: infoExtra.value.trim(),
-                foto: fotoBase64,
-                estado: 'Pendiente de verificación'
-            };
-
-            const solicitudesGuardadas =
-                JSON.parse(localStorage.getItem('solicitudesBusqueda')) || [];
-
-            solicitudesGuardadas.push(nuevaSolicitud);
-
-            localStorage.setItem(
-                'solicitudesBusqueda',
-                JSON.stringify(solicitudesGuardadas)
-            );
-
-            botonEnviar.textContent = 'SOLICITUD ENVIADA';
-        });
-
+        botonEnviar.textContent = "SOLICITUD ENVIADA";
+      });
     </script>
-</body>
-
+  </body>
 </html>

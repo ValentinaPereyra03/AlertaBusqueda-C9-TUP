@@ -1,17 +1,16 @@
 :root {
-    --alto-navbar: 110px;
+  --alto-navbar: 110px;
 
-    --color-primario: #f6f7f9;
-    --color-secundario: #f9fafb;
-    --color-blanco: #ffffff;
-    --color-texto: #333333;
-    --color-fondo-claro: #f4f4f4c2;
-    --color-fondo-gris: #f4f4f4c2;
-    --color-borde: #dddddd;
+  --color-primario: #f6f7f9;
+  --color-secundario: #f9fafb;
+  --color-blanco: #ffffff;
+  --color-texto: #333333;
+  --color-fondo-claro: #f4f4f4c2;
+  --color-fondo-gris: #f4f4f4c2;
+  --color-borde: #dddddd;
 
-    --color-azul: #1f3fb4;
+  --color-azul: #1f3fb4;
 }
-
 
 /*
 html {
@@ -709,43 +708,47 @@ body {
 */
 
 .tarjeta-beneficio {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background-color: transparent;
 }
 
 .tarjeta-beneficio:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527);
-    background-color: #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527);
+  background-color: #ffffff;
 }
 
 .tarjeta-animada {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .tarjeta-animada:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(17, 0, 255, 0.527) !important;
 }
 
 .titulo-inicio {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    font-weight: 800;
-    color: #0A2F6B;
-    line-height: 1.05;
-    letter-spacing: -1px;
-    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.85);
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #0a2f6b;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.85);
 }
 
 .subtitulo-inicio {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #0A2F6B;
-    line-height: 1.4;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a2f6b;
+  line-height: 1.4;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }

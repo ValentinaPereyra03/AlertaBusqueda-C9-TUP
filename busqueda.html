@@ -1,407 +1,512 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Consultá casos y solicitudes de búsqueda de personas desaparecidas publicadas en Alerta Búsqueda."
+    />
 
-    <meta name="description"
-        content="Consultá casos y solicitudes de búsqueda de personas desaparecidas publicadas en Alerta Búsqueda.">
+    <meta
+      name="keywords"
+      content="buscar personas desaparecidas, personas buscadas, casos de búsqueda, Alerta Búsqueda"
+    />
 
-    <meta name="keywords"
-        content="buscar personas desaparecidas, personas buscadas, casos de búsqueda, Alerta Búsqueda">
-
-    <meta name="author" content="Equipo Alerta Búsqueda">
+    <meta name="author" content="Equipo Alerta Búsqueda" />
 
     <title>Buscar personas | Alerta Búsqueda</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-<body class="bg-light">
-
+  <body class="bg-light">
     <nav class="navbar bg-white fixed-top shadow-sm px-3 py-1">
-        <div class="container-fluid position-relative">
+      <div class="container-fluid position-relative">
+        <button
+          class="navbar-toggler border-0 text-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menuLateral"
+          aria-controls="menuLateral"
+        >
+          <span class="fs-3 d-inline-flex align-items-center">
+            ☰
+            <span class="fs-6 fw-bold ms-1 d-none d-sm-inline">Menú</span>
+          </span>
+        </button>
 
-            <button class="navbar-toggler border-0 text-primary" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#menuLateral" aria-controls="menuLateral">
-                <span class="fs-3 d-inline-flex align-items-center">
-                    ☰
-                    <span class="fs-6 fw-bold ms-1 d-none d-sm-inline">Menú</span>
-                </span>
-            </button>
-
-            <!-- Logo centrado (Fijamos el alto para afinar la barra) -->
-            <a class="navbar-brand position-absolute start-50 translate-middle-x py-0" href="index.html">
-                <img src="img/logo-encabezado2 (2).png" alt="Logo de Alerta Búsqueda"
-                    style="height: 85px; width: auto; object-fit: contain;">
-            </a>
-        </div>
+        <!-- Logo centrado (Fijamos el alto para afinar la barra) -->
+        <a
+          class="navbar-brand position-absolute start-50 translate-middle-x py-0"
+          href="index.html"
+        >
+          <img
+            src="img/logo-encabezado2 (2).png"
+            alt="Logo de Alerta Búsqueda"
+            style="height: 85px; width: auto; object-fit: contain"
+          />
+        </a>
+      </div>
     </nav>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
-        <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title text-primary fw-bold" id="menuLateralLabel">Alerta Búsqueda</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="nav flex-column fs-5 gap-3 mt-2">
-                <li class="nav-item"><a class="nav-link text-dark" href="index.html"><i
-                            class="bi bi-house-door text-primary me-2"></i> Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="busqueda.html"><i
-                            class="bi bi-search text-primary me-2"></i> Búsqueda</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="registro.html"><i
-                            class="bi bi-file-earmark-text text-primary me-2"></i> Registrar búsqueda</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="recibir.html"><i
-                            class="bi bi-bell text-primary me-2"></i> Recibir Alertas</a></li>
-            </ul>
-        </div>
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="menuLateral"
+      aria-labelledby="menuLateralLabel"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title text-primary fw-bold" id="menuLateralLabel">
+          Alerta Búsqueda
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column fs-5 gap-3 mt-2">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html"
+              ><i class="bi bi-house-door text-primary me-2"></i> Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="busqueda.html"
+              ><i class="bi bi-search text-primary me-2"></i> Búsqueda</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="registro.html"
+              ><i class="bi bi-file-earmark-text text-primary me-2"></i>
+              Registrar búsqueda</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="recibir.html"
+              ><i class="bi bi-bell text-primary me-2"></i> Recibir Alertas</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="container" style="margin-top: 110px;">
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-8 col-lg-6 text-center">
-                <h1 class="h3 fw-bold mb-4" style="color: #0a2f6b;">Casos Activos</h1>
+    <div class="container" style="margin-top: 110px">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-8 col-lg-6 text-center">
+          <h1 class="h3 fw-bold mb-4" style="color: #0a2f6b">Casos Activos</h1>
 
-                <div class="input-group shadow rounded-pill overflow-hidden mx-auto">
-                    <input type="text" id="input-buscador" class="form-control border-0 px-4 fs-6 py-3"
-                        placeholder="Buscar por nombre, apellido o zona..." aria-label="Buscar"
-                        style="box-shadow: none;">
-                    <button class="btn btn-primary px-4 fw-bold fs-6" type="button">Buscar</button>
-                </div>
-
-            </div>
+          <div class="input-group shadow rounded-pill overflow-hidden mx-auto">
+            <input
+              type="text"
+              id="input-buscador"
+              class="form-control border-0 px-4 fs-6 py-3"
+              placeholder="Buscar por nombre, apellido o zona..."
+              aria-label="Buscar"
+              style="box-shadow: none"
+            />
+            <button class="btn btn-primary px-4 fw-bold fs-6" type="button">
+              Buscar
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <main class="container mb-5" id="contenedor-fichas">
-        <div class="row g-4 justify-content-center">
-
-            <!-- FICHA 1 -->
-            <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
-                <a href="#" class="text-decoration-none caso-fijo" data-caso="0">
-                    <div class="card h-100 border-0 shadow-sm tarjeta-animada">
-                        <!-- Atributo alt mejorado para el SEO -->
-                        <img src="img/personadesaparecida2.jpg" class="card-img-top bg-secondary"
-                            alt="Fotografía de Juan Pérez, visto en Tucumán" style="height: 250px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <p class="card-text fw-bold text-dark texto-ficha small">Juan Pérez - Visto por última vez
-                                en Tucumán - Edad 28</p>
-                        </div>
-                    </div>
-                </a>
+      <div class="row g-4 justify-content-center">
+        <!-- FICHA 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
+          <a href="#" class="text-decoration-none caso-fijo" data-caso="0">
+            <div class="card h-100 border-0 shadow-sm tarjeta-animada">
+              <!-- Atributo alt mejorado para el SEO -->
+              <img
+                src="img/personadesaparecida2.jpg"
+                class="card-img-top bg-secondary"
+                alt="Fotografía de Juan Pérez, visto en Tucumán"
+                style="height: 250px; object-fit: cover"
+              />
+              <div class="card-body text-center">
+                <p class="card-text fw-bold text-dark texto-ficha small">
+                  Juan Pérez - Visto por última vez en Tucumán - Edad 28
+                </p>
+              </div>
             </div>
-
-            <!-- FICHA 2 -->
-            <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
-                <a href="#" class="text-decoration-none caso-fijo" data-caso="1">
-                    <div class="card h-100 border-0 shadow-sm tarjeta-animada">
-                        <img src="img/personadesaparecida1.jpg" class="card-img-top bg-secondary"
-                            alt="Fotografía de María Gómez, falta en Córdoba" style="height: 250px; object-fit: cover;">
-
-                        <div class="card-body text-center">
-                            <p class="card-text fw-bold text-dark texto-ficha small">
-                                María Gómez - Falta desde el 12/05 en Córdoba - Edad 70
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- FICHA 3 -->
-            <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
-                <a href="#" class="text-decoration-none caso-fijo" data-caso="2">
-                    <div class="card h-100 border-0 shadow-sm tarjeta-animada">
-                        <img src="img/personadesaparecida3.jpeg" class="card-img-top bg-secondary"
-                            alt="Fotografía de Carlos López, desaparecido en Buenos Aires"
-                            style="height: 250px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <p class="card-text fw-bold text-dark texto-ficha small">Carlos López - Desaparecido en
-                                Buenos Aires - Edad 60</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
+          </a>
         </div>
+
+        <!-- FICHA 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
+          <a href="#" class="text-decoration-none caso-fijo" data-caso="1">
+            <div class="card h-100 border-0 shadow-sm tarjeta-animada">
+              <img
+                src="img/personadesaparecida1.jpg"
+                class="card-img-top bg-secondary"
+                alt="Fotografía de María Gómez, falta en Córdoba"
+                style="height: 250px; object-fit: cover"
+              />
+
+              <div class="card-body text-center">
+                <p class="card-text fw-bold text-dark texto-ficha small">
+                  María Gómez - Falta desde el 12/05 en Córdoba - Edad 70
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- FICHA 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 col-ficha">
+          <a href="#" class="text-decoration-none caso-fijo" data-caso="2">
+            <div class="card h-100 border-0 shadow-sm tarjeta-animada">
+              <img
+                src="img/personadesaparecida3.jpeg"
+                class="card-img-top bg-secondary"
+                alt="Fotografía de Carlos López, desaparecido en Buenos Aires"
+                style="height: 250px; object-fit: cover"
+              />
+              <div class="card-body text-center">
+                <p class="card-text fw-bold text-dark texto-ficha small">
+                  Carlos López - Desaparecido en Buenos Aires - Edad 60
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </main>
 
     <!-- MODAL DETALLE DE LA PERSONA -->
-    <div class="modal fade" id="modalDetallePersona" tabindex="-1" aria-labelledby="tituloModalPersona"
-        aria-hidden="true">
+    <div
+      class="modal fade"
+      id="modalDetallePersona"
+      tabindex="-1"
+      aria-labelledby="tituloModalPersona"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header">
+            <h2
+              class="modal-title h5 fw-bold text-primary"
+              id="tituloModalPersona"
+            >
+              Detalle de la búsqueda
+            </h2>
 
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content border-0 shadow">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
 
-                <div class="modal-header">
-                    <h2 class="modal-title h5 fw-bold text-primary" id="tituloModalPersona">
-                        Detalle de la búsqueda
-                    </h2>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-md-5 text-center">
+                <img
+                  id="modalFoto"
+                  src=""
+                  alt="Fotografía de la persona buscada"
+                  class="img-fluid rounded shadow-sm"
+                  style="max-height: 350px; object-fit: cover"
+                />
+              </div>
 
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar">
-                    </button>
-                </div>
+              <div class="col-md-7">
+                <h3 id="modalNombre" class="h4 fw-bold mb-3"></h3>
 
-                <div class="modal-body">
-                    <div class="row g-4">
+                <p>
+                  <strong>Edad:</strong>
+                  <span id="modalEdad"></span>
+                </p>
 
-                        <div class="col-md-5 text-center">
-                            <img id="modalFoto" src="" alt="Fotografía de la persona buscada"
-                                class="img-fluid rounded shadow-sm" style="max-height: 350px; object-fit: cover;">
-                        </div>
+                <p>
+                  <strong>Provincia:</strong>
+                  <span id="modalProvincia"></span>
+                </p>
 
-                        <div class="col-md-7">
+                <p>
+                  <strong>Fecha de desaparición:</strong>
+                  <span id="modalFecha"></span>
+                </p>
 
-                            <h3 id="modalNombre" class="h4 fw-bold mb-3">
-                            </h3>
+                <p>
+                  <strong>Último lugar donde fue vista:</strong>
+                  <span id="modalLugar"></span>
+                </p>
 
-                            <p>
-                                <strong>Edad:</strong>
-                                <span id="modalEdad"></span>
-                            </p>
+                <p>
+                  <strong>Descripción:</strong>
+                  <span id="modalDescripcion"></span>
+                </p>
 
-                            <p>
-                                <strong>Provincia:</strong>
-                                <span id="modalProvincia"></span>
-                            </p>
+                <p>
+                  <strong>Información adicional:</strong>
+                  <span id="modalInfoExtra"></span>
+                </p>
 
-                            <p>
-                                <strong>Fecha de desaparición:</strong>
-                                <span id="modalFecha"></span>
-                            </p>
-
-                            <p>
-                                <strong>Último lugar donde fue vista:</strong>
-                                <span id="modalLugar"></span>
-                            </p>
-
-                            <p>
-                                <strong>Descripción:</strong>
-                                <span id="modalDescripcion"></span>
-                            </p>
-
-                            <p>
-                                <strong>Información adicional:</strong>
-                                <span id="modalInfoExtra"></span>
-                            </p>
-
-                            <p>
-                                <strong>Estado:</strong>
-                                <span id="modalEstado"></span>
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
+                <p>
+                  <strong>Estado:</strong>
+                  <span id="modalEstado"></span>
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
+      function mostrarDetallePersona(persona) {
+        document.getElementById("modalNombre").textContent =
+          `${persona.nombre} ${persona.apellido}`;
 
-        function mostrarDetallePersona(persona) {
-            document.getElementById('modalNombre').textContent =
-                `${persona.nombre} ${persona.apellido}`;
+        document.getElementById("modalEdad").textContent =
+          persona.edad || "No especificada";
 
-            document.getElementById('modalEdad').textContent =
-                persona.edad || 'No especificada';
+        document.getElementById("modalProvincia").textContent =
+          persona.provincia || "No especificada";
 
-            document.getElementById('modalProvincia').textContent =
-                persona.provincia || 'No especificada';
+        document.getElementById("modalFecha").textContent =
+          persona.fechaDesaparicion || "No especificada";
 
-            document.getElementById('modalFecha').textContent =
-                persona.fechaDesaparicion || 'No especificada';
+        document.getElementById("modalLugar").textContent =
+          persona.lugar || "No especificado";
 
-            document.getElementById('modalLugar').textContent =
-                persona.lugar || 'No especificado';
+        document.getElementById("modalDescripcion").textContent =
+          persona.descripcion || "Sin descripción";
 
-            document.getElementById('modalDescripcion').textContent =
-                persona.descripcion || 'Sin descripción';
+        document.getElementById("modalInfoExtra").textContent =
+          persona.infoExtra || "Sin información adicional";
 
-            document.getElementById('modalInfoExtra').textContent =
-                persona.infoExtra || 'Sin información adicional';
+        document.getElementById("modalEstado").textContent =
+          persona.estado || "Búsqueda activa";
 
-            document.getElementById('modalEstado').textContent =
-                persona.estado || 'Búsqueda activa';
+        const modalFoto = document.getElementById("modalFoto");
 
-            document.getElementById('modalFoto').src =
-                persona.foto || '';
+          if (persona.foto) {
+              modalFoto.src = persona.foto;
+              modalFoto.style.display = "";
+          } else {
+              modalFoto.src = "";
+              modalFoto.style.display = "none";
+          }
 
-            const modal = new bootstrap.Modal(
-                document.getElementById('modalDetallePersona')
-            );
 
-            modal.show();
-        }
+        const modal = new bootstrap.Modal(
+          document.getElementById("modalDetallePersona"),
+        );
 
-        const casosFijos = [
-            {
-                nombre: 'Juan',
-                apellido: 'Pérez',
-                edad: '28',
-                provincia: 'Tucumán',
-                fechaDesaparicion: 'No especificada',
-                lugar: 'Tucumán',
-                descripcion: 'Cabello de color castaño',
-                infoExtra: 'Vestido de ropa deportiva',
-                estado: 'Búsqueda activa',
-                foto: 'img/personadesaparecida2.jpg'
-            },
-            {
-                nombre: 'María',
-                apellido: 'Gómez',
-                edad: '70',
-                provincia: 'Córdoba',
-                fechaDesaparicion: '12/05',
-                lugar: 'Córdoba',
-                descripcion: 'Cabello de color blanco.',
-                infoExtra: 'Vestida de camison con flores rosas, presenta demencia..',
-                estado: 'Búsqueda activa',
-                foto: 'img/personadesaparecida1.jpg'
-            },
-            {
-                nombre: 'Carlos',
-                apellido: 'López',
-                edad: '60',
-                provincia: 'Buenos Aires',
-                fechaDesaparicion: 'No especificada',
-                lugar: 'Buenos Aires',
-                descripcion: 'Cabello de color blanco',
-                infoExtra: 'Vestido de camisa blanca y pantalon negro, presenta demencia.',
-                estado: 'Búsqueda activa',
-                foto: 'img/personadesaparecida3.jpeg'
-            }
-        ];
+        modal.show();
+      }
 
-        const tarjetasFijas = document.querySelectorAll('.caso-fijo');
+      const casosFijos = [
+        {
+          nombre: "Juan",
+          apellido: "Pérez",
+          edad: "28",
+          provincia: "Tucumán",
+          fechaDesaparicion: "No especificada",
+          lugar: "Tucumán",
+          descripcion: "Cabello de color castaño",
+          infoExtra: "Vestido de ropa deportiva",
+          estado: "Búsqueda activa",
+          foto: "img/personadesaparecida2.jpg",
+        },
+        {
+          nombre: "María",
+          apellido: "Gómez",
+          edad: "70",
+          provincia: "Córdoba",
+          fechaDesaparicion: "12/05",
+          lugar: "Córdoba",
+          descripcion: "Cabello de color blanco.",
+          infoExtra: "Vestida de camison con flores rosas, presenta demencia..",
+          estado: "Búsqueda activa",
+          foto: "img/personadesaparecida1.jpg",
+        },
+        {
+          nombre: "Carlos",
+          apellido: "López",
+          edad: "60",
+          provincia: "Buenos Aires",
+          fechaDesaparicion: "No especificada",
+          lugar: "Buenos Aires",
+          descripcion: "Cabello de color blanco",
+          infoExtra:
+            "Vestido de camisa blanca y pantalon negro, presenta demencia.",
+          estado: "Búsqueda activa",
+          foto: "img/personadesaparecida3.jpeg",
+        },
+      ];
 
-        tarjetasFijas.forEach(tarjeta => {
-            tarjeta.addEventListener('click', (e) => {
-                e.preventDefault();
+      const tarjetasFijas = document.querySelectorAll(".caso-fijo");
 
-                const indiceCaso = tarjeta.dataset.caso;
-                mostrarDetallePersona(casosFijos[indiceCaso]);
-            });
+      tarjetasFijas.forEach((tarjeta) => {
+        tarjeta.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const indiceCaso = tarjeta.dataset.caso;
+          mostrarDetallePersona(casosFijos[indiceCaso]);
+        });
+      });
+
+      function quitarAcentos(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      }
+      const solicitudesGuardadas =
+        JSON.parse(localStorage.getItem("solicitudesBusqueda")) || [];
+
+      console.log(solicitudesGuardadas);
+      const contenedorFichas = document.querySelector(
+        "#contenedor-fichas .row",
+      );
+      solicitudesGuardadas.forEach((solicitud) => {
+        const nuevaFicha = document.createElement("div");
+        nuevaFicha.classList.add(
+          "col-sm-6",
+          "col-md-4",
+          "col-lg-3",
+          "col-ficha",
+        );
+
+        const tarjeta = document.createElement("div");
+        tarjeta.classList.add(
+          "card",
+          "h-100",
+          "border-0",
+          "shadow-sm",
+          "tarjeta-animada",
+        );
+
+        if (solicitud.foto) {
+          const imagen = document.createElement("img");
+
+          imagen.src = solicitud.foto;
+          imagen.classList.add("card-img-top");
+          imagen.alt = `Fotografía de ${solicitud.nombre} ${solicitud.apellido}`;
+          imagen.style.height = "250px";
+          imagen.style.objectFit = "cover";
+
+          tarjeta.appendChild(imagen);
+        } else {
+          const sinFoto = document.createElement("div");
+
+          sinFoto.classList.add(
+            "d-flex",
+            "align-items-center",
+            "justify-content-center",
+            "bg-secondary",
+            "text-white",
+            "fw-bold",
+          );
+
+          sinFoto.style.height = "250px";
+          sinFoto.textContent = "Sin fotografía";
+
+          tarjeta.appendChild(sinFoto);
+}
+
+        const cuerpoTarjeta = document.createElement("div");
+        cuerpoTarjeta.classList.add("card-body", "text-center");
+
+        const textoFicha = document.createElement("p");
+        textoFicha.classList.add(
+          "card-text",
+          "fw-bold",
+          "text-dark",
+          "texto-ficha",
+          "small",
+        );
+
+        textoFicha.textContent = `${solicitud.nombre} ${solicitud.apellido} - ${solicitud.estado}`;
+
+        cuerpoTarjeta.appendChild(textoFicha);
+        tarjeta.appendChild(cuerpoTarjeta);
+        tarjeta.addEventListener("click", () => {
+          mostrarDetallePersona(solicitud);
+        });
+        nuevaFicha.appendChild(tarjeta);
+        contenedorFichas.appendChild(nuevaFicha);
+      });
+      const inputBuscador = document.getElementById("input-buscador");
+      const parametros = new URLSearchParams(window.location.search);
+      const busquedaInicio = parametros.get("q");
+
+      if (busquedaInicio) {
+        inputBuscador.value = busquedaInicio;
+      }
+      const fichas = document.querySelectorAll(".col-ficha");
+
+      inputBuscador.addEventListener("keyup", (e) => {
+        const textoBusqueda = quitarAcentos(e.target.value.toLowerCase());
+        let coincidencias = 0;
+
+        fichas.forEach((ficha) => {
+          const textoFichaOriginal = ficha
+            .querySelector(".texto-ficha")
+            .textContent.toLowerCase();
+          const textoFichaLimpio = quitarAcentos(textoFichaOriginal);
+
+          if (textoFichaLimpio.includes(textoBusqueda)) {
+            ficha.style.display = "";
+            coincidencias++;
+          } else {
+            ficha.style.display = "none";
+          }
         });
 
-        function quitarAcentos(texto) {
-            return texto
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "");
+        manejarMensajeSinResultados(coincidencias);
+      });
+
+      if (busquedaInicio) {
+        inputBuscador.dispatchEvent(new Event("keyup"));
+      }
+
+      function manejarMensajeSinResultados(coincidencias) {
+        const contenedorRow = document.querySelector("#contenedor-fichas .row");
+        let alertaExistente = document.getElementById("mensaje-sin-resultados");
+
+        if (coincidencias === 0 && !alertaExistente) {
+          const nuevoMensaje = document.createElement("div");
+          nuevoMensaje.id = "mensaje-sin-resultados";
+          nuevoMensaje.classList.add(
+            "col-12",
+            "alert",
+            "alert-warning",
+            "text-center",
+            "fw-bold",
+            "mt-4",
+            "shadow-sm",
+          );
+          nuevoMensaje.textContent =
+            "No se encontraron casos que coincidan con la búsqueda.";
+          contenedorRow.appendChild(nuevoMensaje);
+        } else if (coincidencias > 0 && alertaExistente) {
+          alertaExistente.remove();
         }
-        const solicitudesGuardadas =
-            JSON.parse(localStorage.getItem('solicitudesBusqueda')) || [];
-
-        console.log(solicitudesGuardadas);
-        const contenedorFichas = document.querySelector('#contenedor-fichas .row');
-        solicitudesGuardadas.forEach(solicitud => {
-            const nuevaFicha = document.createElement('div');
-            nuevaFicha.classList.add(
-                'col-sm-6',
-                'col-md-4',
-                'col-lg-3',
-                'col-ficha'
-            );
-
-            const tarjeta = document.createElement('div');
-            tarjeta.classList.add(
-                'card',
-                'h-100',
-                'border-0',
-                'shadow-sm',
-                'tarjeta-animada'
-            );
-
-            if (solicitud.foto) {
-                const imagen = document.createElement('img');
-
-                imagen.src = solicitud.foto;
-                imagen.classList.add('card-img-top');
-                imagen.alt = `Fotografía de ${solicitud.nombre} ${solicitud.apellido}`;
-                imagen.style.height = '250px';
-                imagen.style.objectFit = 'cover';
-
-                tarjeta.appendChild(imagen);
-            }
-
-            const cuerpoTarjeta = document.createElement('div');
-            cuerpoTarjeta.classList.add('card-body', 'text-center');
-
-            const textoFicha = document.createElement('p');
-            textoFicha.classList.add(
-                'card-text',
-                'fw-bold',
-                'text-dark',
-                'texto-ficha',
-                'small'
-            );
-
-            textoFicha.textContent =
-                `${solicitud.nombre} ${solicitud.apellido} - ${solicitud.estado}`;
-
-            cuerpoTarjeta.appendChild(textoFicha);
-            tarjeta.appendChild(cuerpoTarjeta);
-            tarjeta.addEventListener('click', () => {
-                mostrarDetallePersona(solicitud);
-            });
-            nuevaFicha.appendChild(tarjeta);
-            contenedorFichas.appendChild(nuevaFicha);
-        });
-                const inputBuscador = document.getElementById('input-buscador');
-                const parametros = new URLSearchParams(window.location.search);
-                const busquedaInicio = parametros.get('q');
-
-                if (busquedaInicio) {
-                    inputBuscador.value = busquedaInicio;
-                }
-        const fichas = document.querySelectorAll('.col-ficha');
-
-        inputBuscador.addEventListener('keyup', (e) => {
-            const textoBusqueda = quitarAcentos(e.target.value.toLowerCase());
-            let coincidencias = 0;
-
-            fichas.forEach(ficha => {
-                const textoFichaOriginal = ficha.querySelector('.texto-ficha').textContent.toLowerCase();
-                const textoFichaLimpio = quitarAcentos(textoFichaOriginal);
-
-                if (textoFichaLimpio.includes(textoBusqueda)) {
-                    ficha.style.display = '';
-                    coincidencias++;
-                } else {
-                    ficha.style.display = 'none';
-                }
-            });
-
-            manejarMensajeSinResultados(coincidencias);
-        });
-
-    if (busquedaInicio) {
-        inputBuscador.dispatchEvent(new Event('keyup'));
-    }
-
-        function manejarMensajeSinResultados(coincidencias) {
-            const contenedorRow = document.querySelector('#contenedor-fichas .row');
-            let alertaExistente = document.getElementById('mensaje-sin-resultados');
-
-            if (coincidencias === 0 && !alertaExistente) {
-                const nuevoMensaje = document.createElement('div');
-                nuevoMensaje.id = 'mensaje-sin-resultados';
-                nuevoMensaje.classList.add('col-12', 'alert', 'alert-warning', 'text-center', 'fw-bold', 'mt-4', 'shadow-sm');
-                nuevoMensaje.textContent = 'No se encontraron casos que coincidan con la búsqueda.';
-                contenedorRow.appendChild(nuevoMensaje);
-            }
-            else if (coincidencias > 0 && alertaExistente) {
-                alertaExistente.remove();
-            }
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>

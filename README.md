@@ -1,10 +1,11 @@
 # ProgramacionIV
+
 # Alerta Búsqueda
 
 ## Integrantes
 
-- Valentina Pereyra 
-- Gonzalo Miranda 
+- Valentina Pereyra
+- Gonzalo Miranda
 - Ignacio Rosconi
 
 ## Descripción del proyecto
@@ -35,24 +36,25 @@ Para desarrollar el proyecto utilizamos:
 - Git y GitHub para el control de versiones y el trabajo con ramas.
 - Netlify para realizar el deploy del sitio.
 
-
 ## ¿Dónde utilizamos Flexbox?
 
 Utilizamos Flexbox principalmente para alinear y distribuir elementos de la página.
 En la primera versión del proyecto utilizamos propiedades como:
+
 - display: flex
 - align-items
 - justify-content
 - flex-direction
-Por ejemplo, se utilizó Flexbox en la barra de navegación, en el contenido principal, en el buscador y en
-distintos elementos que necesitaban alinearse horizontal o verticalmente.
-Después del refactor con Bootstrap continuamos utilizando Flexbox mediante clases de Bootstrap como:
+  Por ejemplo, se utilizó Flexbox en la barra de navegación, en el contenido principal, en el buscador y en
+  distintos elementos que necesitaban alinearse horizontal o verticalmente.
+  Después del refactor con Bootstrap continuamos utilizando Flexbox mediante clases de Bootstrap como:
 - d-flex
 - d-inline-flex
 - align-items-center
 - justify-content-center
-Un ejemplo se encuentra en la página de inicio, donde utilizamos estas clases para centrar y alinear el
-contenido del encabezado principal.
+  Un ejemplo se encuentra en la página de inicio, donde utilizamos estas clases para centrar y alinear el
+  contenido del encabezado principal.
+
 ---
 
 ## ¿Dónde utilizamos Grid?
@@ -70,15 +72,15 @@ En este caso organizábamos los tres beneficios de la página de inicio en tres 
 Durante el refactor con Bootstrap mantuvimos el CSS anterior comentado y reemplazamos gran parte de
 esta distribución por el sistema de grilla de Bootstrap.
 Actualmente utilizamos clases como:
+
 - row
 - col-12
 - col-sm-6
 - col-md-4
 - col-lg-3
 - col-lg-8
-Por ejemplo, en la página de búsqueda las tarjetas cambian su cantidad de columnas dependiendo del
-tamaño de la pantalla.
-
+  Por ejemplo, en la página de búsqueda las tarjetas cambian su cantidad de columnas dependiendo del
+  tamaño de la pantalla.
 
 ## ¿Qué variables CSS creamos?
 
@@ -86,15 +88,15 @@ EEn el archivo style.css creamos variables dentro de :root para poder reutilizar
 diseño.
 Las variables que utilizamos son:
 :root {
- --alto-navbar: 110px;
- --color-primario: #f6f7f9;
- --color-secundario: #f9fafb;
- --color-blanco: #ffffff;
- --color-texto: #333333;
- --color-fondo-claro: #f4f4f4c2;
- --color-fondo-gris: #f4f4f4c2;
- --color-borde: #dddddd;
- --color-azul: #1f3fb4;
+--alto-navbar: 110px;
+--color-primario: #f6f7f9;
+--color-secundario: #f9fafb;
+--color-blanco: #ffffff;
+--color-texto: #333333;
+--color-fondo-claro: #f4f4f4c2;
+--color-fondo-gris: #f4f4f4c2;
+--color-borde: #dddddd;
+--color-azul: #1f3fb4;
 }
 Estas variables nos permitieron tener valores reutilizables para los colores, fondos, bordes y el tamaño de
 la barra de navegación.
@@ -105,6 +107,7 @@ variables y los estilos anteriores para mostrar el desarrollo realizado en las e
 
 Implementamos el Responsive Design utilizando principalmente el sistema responsive de Bootstrap.
 En todas las páginas agregamos:
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 También utilizamos las columnas responsive de Bootstrap para que los elementos cambien su distribución
 dependiendo del tamaño de la pantalla.
