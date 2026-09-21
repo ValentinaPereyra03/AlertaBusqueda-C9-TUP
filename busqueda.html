@@ -303,7 +303,16 @@
         document.getElementById("modalEstado").textContent =
           persona.estado || "Búsqueda activa";
 
-        document.getElementById("modalFoto").src = persona.foto || "";
+        const modalFoto = document.getElementById("modalFoto");
+
+          if (persona.foto) {
+              modalFoto.src = persona.foto;
+              modalFoto.style.display = "";
+          } else {
+              modalFoto.src = "";
+              modalFoto.style.display = "none";
+          }
+
 
         const modal = new bootstrap.Modal(
           document.getElementById("modalDetallePersona"),
@@ -401,7 +410,23 @@
           imagen.style.objectFit = "cover";
 
           tarjeta.appendChild(imagen);
-        }
+        } else {
+          const sinFoto = document.createElement("div");
+
+          sinFoto.classList.add(
+            "d-flex",
+            "align-items-center",
+            "justify-content-center",
+            "bg-secondary",
+            "text-white",
+            "fw-bold",
+          );
+
+          sinFoto.style.height = "250px";
+          sinFoto.textContent = "Sin fotografía";
+
+          tarjeta.appendChild(sinFoto);
+}
 
         const cuerpoTarjeta = document.createElement("div");
         cuerpoTarjeta.classList.add("card-body", "text-center");
